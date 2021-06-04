@@ -1,0 +1,23 @@
+# Getting Colors
+source $PODGL/lib/colors
+
+# Here You Can Set Your Own Envirenment Variables to work with
+# Envirenment Variables
+
+    # Command Line Prompt: Uncomment a one or create your own PS1
+
+export PS1="[$(whoami)]----> "
+#export PS1="(;)=> "
+#
+#
+#
+
+export VICTIM=0.0.0.0
+export PORT=4444
+
+# Malware Spawner Handler's Envirenment Variables
+export MALWARE=""
+export TYPE=""
+export PLATFORM=""
+export ARCH=""
+

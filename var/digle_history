@@ -1,0 +1,500 @@
+nano run/search
+search google
+clear
+search exploit
+search google
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+search test
+search google
+clear
+nano run/search
+search google
+clear
+search search
+clear
+search youtube
+man nl
+man nl | grep color
+man nl
+clear
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+search fuck
+nano run/search
+clear
+search fuckmeyou
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+search test
+clear
+search nmap
+clear
+cat /proc/meminfo
+clear
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+while [ 1 ]; do  cin cmd;  if [ "$cmd" == "" ];then    continue;  fi
+ for path in $(/bin/cat $PODGL/etc/PATH.dgl); do     if [ ! -f "$path$(echo $cmd | head -n1 | awk '{print $1;}')" ];then       tcheck $path$cmd;       if [ "$?" == 0 ];then continue;fi
+      if [ "$path" == "$(/bin/tail -1 $PODGL/etc/PATH.dgl)" ] && [ ! -f "$(/bin/tail -1 $PODGL/etc/PATH.dgl)$cmd" ];then 	 type $(echo $cmd | head -n1 | awk '{print $1;}') &> /dev/null;          if [ "$?" != 0 ];then               cerr "$red$(echo $cmd | head -n1 | awk '{print $1;}')$white Command Execution Error: Command Not Found";          else               $cmd;               history -s $cmd; 	      break;          fi;          break;
+      elif [ -f "$(/bin/tail -1 $PODGL/etc/PATH.dgl)$(echo $cmd | head -n1 | awk '{print $1;}')" ];then
+	 $(/bin/tail -1 $PODGL/etc/PATH.dgl)$cmd;          history -s $cmd; 	 break;       else       continue;       fi;     continue;     fi;     $path$cmd;     history -s $cmd;     break;  done; done
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+password
+password root
+clear
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+while [ 1 ]; do  cin cmd;  if [ "$cmd" == "" ];then    continue;  fi
+ for path in $(/bin/cat $PODGL/etc/PATH.dgl); do     if [ ! -f "$path$(echo $cmd | head -n1 | awk '{print $1;}')" ];then       tcheck $path$cmd;       if [ "$?" == 0 ];then continue;fi
+      if [ "$path" == "$(/bin/tail -1 $PODGL/etc/PATH.dgl)" ] && [ ! -f "$(/bin/tail -1 $PODGL/etc/PATH.dgl)$cmd" ];then 	 type $(echo $cmd | head -n1 | awk '{print $1;}') &> /dev/null;          if [ "$?" != 0 ];then               cerr "$red$(echo $cmd | head -n1 | awk '{print $1;}')$white Command Execution Error: Command Not Found";          else               $cmd;               history -s $cmd; 	      break;          fi;          break;
+      elif [ -f "$(/bin/tail -1 $PODGL/etc/PATH.dgl)$(echo $cmd | head -n1 | awk '{print $1;}')" ];then
+	 $(/bin/tail -1 $PODGL/etc/PATH.dgl)$cmd;          history -s $cmd; 	 break;       else       continue;       fi;     continue;     fi;     $path$cmd;     history -s $cmd;     break;  done; done
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+password digle
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+while [ 1 ]; do  cin cmd;  if [ "$cmd" == "" ];then    continue;  fi
+ for path in $(/bin/cat $PODGL/etc/PATH.dgl); do     if [ ! -f "$path$(echo $cmd | head -n1 | awk '{print $1;}')" ];then       tcheck $path$cmd;       if [ "$?" == 0 ];then continue;fi
+      if [ "$path" == "$(/bin/tail -1 $PODGL/etc/PATH.dgl)" ] && [ ! -f "$(/bin/tail -1 $PODGL/etc/PATH.dgl)$cmd" ];then 	 type $(echo $cmd | head -n1 | awk '{print $1;}') &> /dev/null;          if [ "$?" != 0 ];then               cerr "$red$(echo $cmd | head -n1 | awk '{print $1;}')$white Command Execution Error: Command Not Found";          else               $cmd;               history -s $cmd; 	      break;          fi;          break;
+      elif [ -f "$(/bin/tail -1 $PODGL/etc/PATH.dgl)$(echo $cmd | head -n1 | awk '{print $1;}')" ];then
+	 $(/bin/tail -1 $PODGL/etc/PATH.dgl)$cmd;          history -s $cmd; 	 break;       else       continue;       fi;     continue;     fi;     $path$cmd;     history -s $cmd;     break;  done; done
+# Simple Login System
+cd $PODGL/etc/login/
+$PODGL/etc/login/login
+if [ "$?" == 1 ];then    cerr Password Incorrect..!;    exit 1; fi
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+while [ 1 ]; do  cin cmd;  if [ "$cmd" == "" ];then    continue;  fi
+ for path in $(/bin/cat $PODGL/etc/PATH.dgl); do     if [ ! -f "$path$(echo $cmd | head -n1 | awk '{print $1;}')" ];then       tcheck $path$cmd;       if [ "$?" == 0 ];then continue;fi
+      if [ "$path" == "$(/bin/tail -1 $PODGL/etc/PATH.dgl)" ] && [ ! -f "$(/bin/tail -1 $PODGL/etc/PATH.dgl)$cmd" ];then 	 type $(echo $cmd | head -n1 | awk '{print $1;}') &> /dev/null;          if [ "$?" != 0 ];then               cerr "$red$(echo $cmd | head -n1 | awk '{print $1;}')$white Command Execution Error: Command Not Found";          else               $cmd;               history -s $cmd; 	      break;          fi;          break;
+      elif [ -f "$(/bin/tail -1 $PODGL/etc/PATH.dgl)$(echo $cmd | head -n1 | awk '{print $1;}')" ];then
+	 $(/bin/tail -1 $PODGL/etc/PATH.dgl)$cmd;          history -s $cmd; 	 break;       else       continue;       fi;     continue;     fi;     $path$cmd;     history -s $cmd;     break;  done; done
+# Simple Login System
+trap exit SIGINT
+cd $PODGL/etc/login/
+$PODGL/etc/login/login
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+while [ 1 ]; do  cin cmd;  if [ "$cmd" == "" ];then    continue;  fi
+ for path in $(/bin/cat $PODGL/etc/PATH.dgl); do     if [ ! -f "$path$(echo $cmd | head -n1 | awk '{print $1;}')" ];then       tcheck $path$cmd;       if [ "$?" == 0 ];then continue;fi
+      if [ "$path" == "$(/bin/tail -1 $PODGL/etc/PATH.dgl)" ] && [ ! -f "$(/bin/tail -1 $PODGL/etc/PATH.dgl)$cmd" ];then 	 type $(echo $cmd | head -n1 | awk '{print $1;}') &> /dev/null;          if [ "$?" != 0 ];then               cerr "$red$(echo $cmd | head -n1 | awk '{print $1;}')$white Command Execution Error: Command Not Found";          else               $cmd;               history -s $cmd; 	      break;          fi;          break;
+      elif [ -f "$(/bin/tail -1 $PODGL/etc/PATH.dgl)$(echo $cmd | head -n1 | awk '{print $1;}')" ];then
+	 $(/bin/tail -1 $PODGL/etc/PATH.dgl)$cmd;          history -s $cmd; 	 break;       else       continue;       fi;     continue;     fi;     $path$cmd;     history -s $cmd;     break;  done; done
+# Simple Login System
+trap exit SIGINT
+cd $PODGL/etc/login/
+$PODGL/etc/login/login
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+login
+clear
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+nano b
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+help
+ls sbin/
+ls run/
+ls bin/
+nano run/help
+help
+weather
+weather lebanon
+clear
+# Simple Login System
+trap exit SIGINT
+cd $PODGL/etc/login/
+$PODGL/etc/login/login
+if [ "$?" == 1 ];then    cerr Password Incorrect..!;    exit 1; fi
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+clear
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+nano etc/motd
+nano etc/motd
+clear
+nano run/update
+update
+nano run/update
+update
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+search youtube
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+clear
+victim ip 127.0.0.1 port 4444
+victim ip 127.0.0.1 port 444423
+victim ip 127.0.0.1 port 4442
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+while [ 1 ]; do  cin cmd;  if [ "$cmd" == "" ];then    continue;  fi
+ for path in $(/bin/cat $PODGL/etc/PATH.dgl); do     if [ ! -f "$path$(echo $cmd | head -n1 | awk '{print $1;}')" ];then       tcheck $path$cmd;       if [ "$?" == 0 ];then continue;fi
+      if [ "$path" == "$(/bin/tail -1 $PODGL/etc/PATH.dgl)" ] && [ ! -f "$(/bin/tail -1 $PODGL/etc/PATH.dgl)$cmd" ];then 	 type $(echo $cmd | head -n1 | awk '{print $1;}') &> /dev/null;          if [ "$?" != 0 ];then               cerr "$red$(echo $cmd | head -n1 | awk '{print $1;}')$white Command Execution Error: Command Not Found";          else               $cmd;               history -s $cmd; 	      break;          fi;          break;
+      elif [ -f "$(/bin/tail -1 $PODGL/etc/PATH.dgl)$(echo $cmd | head -n1 | awk '{print $1;}')" ];then
+	 $(/bin/tail -1 $PODGL/etc/PATH.dgl)$cmd;          history -s $cmd; 	 break;       else       continue;       fi;     continue;     fi;     $path$cmd;     history -s $cmd;     break;  done; done
+# Simple Login System
+trap exit SIGINT
+cd $PODGL/etc/login/
+$PODGL/etc/login/login
+if [ "$?" == 1 ];then    cerr Password Incorrect..!;    exit 1; fi
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+update
+clear
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+clear
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+help
+search site123
+clear
+search qweq
+clear
+search exploit
+clear
+search exploit-db
+clear
+# Simple Login System
+trap exit SIGINT
+cd $PODGL/etc/login/
+$PODGL/etc/login/login
+if [ "$?" == 1 ];then    cerr Password Incorrect..!;    exit 1; fi
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+clear
+help
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+victim ip 127.0.0.1
+hack
+clear
+hack
+clear
+rm
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+victim ip 127.0.0.1
+hack
+clear
+ps aux
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+hack
+victim ip 127.0.0.1
+hack
+hack
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+update
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+clear
+victim ip 127.0.0.1
+hack
+clear
+hack
+hack
+hack
+hack
+hack
+hack
+hack
+hack
+hack
+clear
+hack
+clear
+hack
+hack
+hack
+clear
+hack
+hack
+apt
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+victim ip 127.0.0.1
+hack
+clear
+hack
+hack
+clear
+hack
+clear
+hack
+hack
+hack
+clear
+hack
+clear
+hack
+clear
+hack
+clear
+hack
+hack
+hack
+hack
+hack
+clear
+hack
+clear
+hack
+hack
+clear
+hack
+clear
+hack
+clear
+hack
+clear
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+victim ip 127.0.0.1
+hack
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+victim ip 127.0.0.1
+hack
+clear
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+clear
+clear
+help
+update
+exploit
+weather
+weather lebanon
+weather zaarourie
+clear
+weather zaarourie
+echo $?
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+help
+clear
+clear
+malwares
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+map
+chmod +x run/ma
+chmod +x run/map
+clear
+map
+source run/map
+linux
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+map linux
+clear
+# Simple Login System
+trap exit SIGINT
+cd $PODGL/etc/login/
+$PODGL/etc/login/login
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+map linux
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+map linux
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+clear
+map
+map ls
+clear
+map linux
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+clear
+map
+map linux
+nano run/ma
+nano run/map
+nano run/map
+map linux
+nano run/map
+clear
+map linux
+nano run/map
+map linux
+nano run/map
+map linux
+nano run/map
+map linux
+nano run/map
+map linux
+nano run/map
+map linux
+nano run/map
+map linux
+nano run/map
+clear
+map linux
+nano run/map
+clear
+map linux
+nano run/map
+map linux
+clear
+nano run/map
+map linux
+nano run/map
+clear
+map linux
+nano run/map
+map linux
+nano run/map
+nano run/map
+map linux
+nano run/map
+map linux
+nano run/map
+map linux
+nano run/map
+map linux
+clear
+map
+clear
+map linux
+nano run/ma
+nano run/map
+clear
+map linux
+nano run/map
+map linux
+nano run/map
+map linux
+nano run/map
+map linux
+clear
+map linux
+nano run/map
+clear
+map linux
+nano run/map
+clear
+map linux
+clear
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+while [ 1 ]; do  cin cmd;  if [ "$cmd" == "" ];then    continue;  fi
+ for path in $(/bin/cat $PODGL/etc/PATH.dgl); do     if [ ! -f "$path$(echo $cmd | head -n1 | awk '{print $1;}')" ];then       tcheck $path$cmd;       if [ "$?" == 0 ];then continue;fi
+      if [ "$path" == "$(/bin/tail -1 $PODGL/etc/PATH.dgl)" ] && [ ! -f "$(/bin/tail -1 $PODGL/etc/PATH.dgl)$cmd" ];then 	 type $(echo $cmd | head -n1 | awk '{print $1;}') &> /dev/null;          if [ "$?" != 0 ];then               cerr "$red$(echo $cmd | head -n1 | awk '{print $1;}')$white Command Execution Error: Command Not Found";          else               $cmd;               history -s $cmd; 	      break;          fi;          break;
+      elif [ -f "$(/bin/tail -1 $PODGL/etc/PATH.dgl)$(echo $cmd | head -n1 | awk '{print $1;}')" ];then
+	 $(/bin/tail -1 $PODGL/etc/PATH.dgl)$cmd;          history -s $cmd; 	 break;       else       continue;       fi;     continue;     fi;     $path$cmd;     history -s $cmd;     break;  done; done
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+while [ 1 ]; do  cin cmd;  if [ "$cmd" == "" ];then    continue;  fi
+ for path in $(/bin/cat $PODGL/etc/PATH.dgl); do     if [ ! -f "$path$(echo $cmd | head -n1 | awk '{print $1;}')" ];then       tcheck $path$cmd;       if [ "$?" == 0 ];then continue;fi
+      if [ "$path" == "$(/bin/tail -1 $PODGL/etc/PATH.dgl)" ] && [ ! -f "$(/bin/tail -1 $PODGL/etc/PATH.dgl)$cmd" ];then 	 type $(echo $cmd | head -n1 | awk '{print $1;}') &> /dev/null;          if [ "$?" != 0 ];then               cerr "$red$(echo $cmd | head -n1 | awk '{print $1;}')$white Command Execution Error: Command Not Found";          else               $cmd;               history -s $cmd; 	      break;          fi;          break;
+      elif [ -f "$(/bin/tail -1 $PODGL/etc/PATH.dgl)$(echo $cmd | head -n1 | awk '{print $1;}')" ];then
+	 $(/bin/tail -1 $PODGL/etc/PATH.dgl)$cmd;          history -s $cmd; 	 break;       else       continue;       fi;     continue;     fi;     $path$cmd;     history -s $cmd;     break;  done; done
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+clear
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+map linux
+clear
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+ls
+nano etc/envir
+reset
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+ls
+clear
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+while [ 1 ]; do  cin cmd;  if [ "$cmd" == "" ];then    continue;  fi
+ for path in $(/bin/cat $PODGL/etc/PATH.dgl); do     if [ ! -f "$path$(echo $cmd | head -n1 | awk '{print $1;}')" ];then       tcheck $path$cmd;       if [ "$?" == 0 ];then continue;fi
+      if [ "$path" == "$(/bin/tail -1 $PODGL/etc/PATH.dgl)" ] && [ ! -f "$(/bin/tail -1 $PODGL/etc/PATH.dgl)$cmd" ];then 	 type $(echo $cmd | head -n1 | awk '{print $1;}') &> /dev/null;          if [ "$?" != 0 ];then               cerr "$red$(echo $cmd | head -n1 | awk '{print $1;}')$white Command Execution Error: Command Not Found";          else               $cmd;               history -s $cmd; 	      break;          fi;          break;
+      elif [ -f "$(/bin/tail -1 $PODGL/etc/PATH.dgl)$(echo $cmd | head -n1 | awk '{print $1;}')" ];then
+	 $(/bin/tail -1 $PODGL/etc/PATH.dgl)$cmd;          history -s $cmd; 	 break;       else       continue;       fi;     continue;     fi;     $path$cmd;     history -s $cmd;     break;  done; done
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+source etc/auto.dgl
+# Simple Login System
+trap exit SIGINT
+cd $PODGL/etc/login/
+$PODGL/etc/login/login
+if [ "$?" == 1 ];then    cerr Password Incorrect..!;    exit 1; fi
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+clear
+digle
+clear
+help
+clear
+map ls
+clear
+pwd
+map ls
+clear
+# Simple Login System
+trap exit SIGINT
+cd $PODGL/etc/login/
+$PODGL/etc/login/login
+if [ "$?" == 1 ];then    cerr Password Incorrect..!;    exit 1; fi
+# Simple Login System
+trap exit SIGINT
+cd $PODGL/etc/login/
+$PODGL/etc/login/login
+if [ "$?" == 1 ];then    cerr Password Incorrect..!;    exit 1; fi
+# Simple Login System
+trap exit SIGINT
+cd $PODGL/etc/login/
+$PODGL/etc/login/login
+if [ "$?" == 1 ];then    cerr Password Incorrect..!;    exit 1; fi
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+clear
+ls
+clear
+map ls
+clear
+map pwd
+clear
+map malwares
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+map help
+clear
+ls
+clear
+map ls
+clear
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+map ls /
+clear
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+map ls
+map ls /
+clear
+map ls .
+clear
+map ls
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+map ls
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+map ls
+map
+map ls
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+map ls
+clear
+map pwd
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+whoami
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+update
+nano run/update
+clear
+nano run/update
+nano
+nano etc/PATH.dgl
+ls run/
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+clear
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+update
+nano run/update
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+update
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+encrypt
+clear
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+clear
+update
+clear
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+if [ -f ".update" ];then    bash run/update;    rm .update; fi
+while [ 1 ]; do  cin cmd;  if [ "$cmd" == "" ];then    continue;  fi
+ for path in $(/bin/cat $PODGL/etc/PATH.dgl); do     if [ ! -f "$path$(echo $cmd | head -n1 | awk '{print $1;}')" ];then       tcheck $path$cmd;       if [ "$?" == 0 ];then continue;fi
+      if [ "$path" == "$(/bin/tail -1 $PODGL/etc/PATH.dgl)" ] && [ ! -f "$(/bin/tail -1 $PODGL/etc/PATH.dgl)$cmd" ];then 	 type $(echo $cmd | head -n1 | awk '{print $1;}') &> /dev/null;          if [ "$?" != 0 ];then               cerr "$red$(echo $cmd | head -n1 | awk '{print $1;}')$white Command Execution Error: Command Not Found";          else               $cmd;               history -s $cmd; 	      break;          fi;          break;
+      elif [ -f "$(/bin/tail -1 $PODGL/etc/PATH.dgl)$(echo $cmd | head -n1 | awk '{print $1;}')" ];then
+	 $(/bin/tail -1 $PODGL/etc/PATH.dgl)$cmd;          history -s $cmd; 	 break;       else       continue;       fi;     continue;     fi;     $path$cmd;     history -s $cmd;     break;  done; done
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+if [ -f ".update" ];then    bash run/update;    rm .update; fi
+clear
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+if [ -f ".update" ];then    printf "file ($green.update$white) Found !! Running Updater...!\n";    sleep 0.5;    bash run/update;    rm .update; fi
+while [ 1 ]; do  cin cmd;  if [ "$cmd" == "" ];then    continue;  fi
+ for path in $(/bin/cat $PODGL/etc/PATH.dgl); do     if [ ! -f "$path$(echo $cmd | head -n1 | awk '{print $1;}')" ];then       tcheck $path$cmd;       if [ "$?" == 0 ];then continue;fi
+      if [ "$path" == "$(/bin/tail -1 $PODGL/etc/PATH.dgl)" ] && [ ! -f "$(/bin/tail -1 $PODGL/etc/PATH.dgl)$cmd" ];then 	 type $(echo $cmd | head -n1 | awk '{print $1;}') &> /dev/null;          if [ "$?" != 0 ];then               cerr "$red$(echo $cmd | head -n1 | awk '{print $1;}')$white Command Execution Error: Command Not Found";          else               $cmd;               history -s $cmd; 	      break;          fi;          break;
+      elif [ -f "$(/bin/tail -1 $PODGL/etc/PATH.dgl)$(echo $cmd | head -n1 | awk '{print $1;}')" ];then
+	 $(/bin/tail -1 $PODGL/etc/PATH.dgl)$cmd;          history -s $cmd; 	 break;       else       continue;       fi;     continue;     fi;     $path$cmd;     history -s $cmd;     break;  done; done
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+if [ -f ".update" ];then    printf "${white}file ($green.update$white) Found !! Running Updater...!\n";    sleep 0.5;    bash run/update;    rm .update; fi
+while [ 1 ]; do  cin cmd;  if [ "$cmd" == "" ];then    continue;  fi
+ for path in $(/bin/cat $PODGL/etc/PATH.dgl); do     if [ ! -f "$path$(echo $cmd | head -n1 | awk '{print $1;}')" ];then       tcheck $path$cmd;       if [ "$?" == 0 ];then continue;fi
+      if [ "$path" == "$(/bin/tail -1 $PODGL/etc/PATH.dgl)" ] && [ ! -f "$(/bin/tail -1 $PODGL/etc/PATH.dgl)$cmd" ];then 	 type $(echo $cmd | head -n1 | awk '{print $1;}') &> /dev/null;          if [ "$?" != 0 ];then               cerr "$red$(echo $cmd | head -n1 | awk '{print $1;}')$white Command Execution Error: Command Not Found";          else               $cmd;               history -s $cmd; 	      break;          fi;          break;
+      elif [ -f "$(/bin/tail -1 $PODGL/etc/PATH.dgl)$(echo $cmd | head -n1 | awk '{print $1;}')" ];then
+	 $(/bin/tail -1 $PODGL/etc/PATH.dgl)$cmd;          history -s $cmd; 	 break;       else       continue;       fi;     continue;     fi;     $path$cmd;     history -s $cmd;     break;  done; done
+tcheck(){ if [ -d "$1" ];then      cd $1;      ./main.*;      cd - &> /dev/null;      return 0; fi; return 1; }
+if [ -f ".update" ];then    printf "${white}file ($green.update$white) Found !! Running Updater...!\n";    sleep 0.5;    bash run/update;    rm .update; fi
+help
+clear
