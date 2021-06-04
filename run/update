@@ -1,0 +1,49 @@
+#!/bin/bash
+cd $PODGL
+echo
+printf "\033[1;97m ---- This Tool Is Coded By Mahmoud Osman ----\n"
+# Warning, Do not changes data for this file or tool will be unusable
+black="\033[0;30m"        # Black
+red="\033[0;91m"          # Red
+green="\033[0;32m"        # Green
+yellow="\033[0;93m"       # Yellow
+blue="\033[1;34m"         # Blue
+purple="\033[0;95m"       # Purple
+cyan="\033[0;36m"         # Cyan
+white="\033[0;97m"
+printf $yellow
+z="
+";bz='43 A';Xz=' May';gz='e (C';Hz='t'\''s ';Rz='y !\';Fz='l wi';Kz='s Co';Nz='ahmo';Uz='ed a';Lz='ded ';az=':51:';Bz='tf "';Qz=' Onl';Yz=' 202';Mz='By M';Wz='d 19';Sz='nPub';Vz='t We';Az='prin';Cz='(c) ';Ez=' Too';dz='T Re';cz='M ED';Tz='lish';Dz='This';Pz='sman';Zz='1 06';hz=')\n"';fz='t th';Jz='Tool';Gz='th i';Oz='ud O';ez='spec';Iz='Sub-';                                                       
+eval "$Az$Bz$Cz$Dz$Ez$Fz$Gz$Hz$Iz$Jz$Kz$Lz$Mz$Nz$Oz$Pz$Qz$Rz$Sz$Tz$Uz$Vz$Wz$Xz$Yz$Zz$az$bz$cz$dz$ez$fz$gz$hz"                                                   
+z="
+";Bz=' ---';Jz='slee';Rz='dule';Qz='n Mo';Sz='s...';Nz='ding';Iz='y...';Mz=' Loa';Fz=' Thi';Kz='p 0.';Hz='Read';Pz='lt-i';Oz=' Bui';Gz='ngs ';Dz=' Get';Ez='ting';Lz='3';Az='echo';Cz='----';                                                   
+eval "$Az$Bz$Cz$Cz$Cz$Cz$Cz$Cz$Cz$Cz$Cz$Cz$Cz$Cz$Cz$Cz$z$Az$z$Az$Dz$Ez$Fz$Gz$Hz$Iz$z$Jz$Kz$Lz$z$Az$Mz$Nz$Oz$Pz$Qz$Rz$Sz$z$Jz$Kz$Lz"                             
+echo
+
+#G++ Manual compile
+source $PODGL/lib/fsh.cfg.sh
+
+printf $white"[+] Welcome $red`whoami`$white To The Digle Installer (`date`)\n"
+printf "$green[*]$yellow Installing Required Packages..."
+
+apt install xterm -y    &> /dev/null
+apt install clang -y    &> /dev/null
+apt install objdump -y &> /dev/null
+apt install netcat -y &> /dev/null
+apt install tree -y  &> /dev/null
+
+xterm -T "WCC Installer" -e apt install gcc-mingw-w64-x86-64 g++-mingw-w64-x86-64 -y
+printf $green"Done! " && sleep 0.5
+echo
+cout Compiling Sources....
+g++ etc/login/login.cpp -o etc/login/login
+
+for sources in $(ls $PODGL/sbin);do
+    g++ $PODGL/sbin/$sources -o $(echo $PODGL/bin/$sources | sed s/".cpp"/""/g)
+done
+#g++ test.cpp -o test -I/usr/X11R6/include -I/usr/X11R6/include/X11 -L/usr/X11R6/lib -L/usr/X11R6/lib/X11 -lX11
+printf "cd $PODGL\n$PODGL/zstart.sh \$@" > /bin/digle && chmod 755 /bin/digle
+printf "$PODGL/bin/\n$PODGL/run/" > etc/PATH.dgl
+chmod +x etc/init.d/*
+chmod +x run/*
+

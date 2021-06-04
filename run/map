@@ -1,0 +1,39 @@
+source $PODGL/lib/colors
+source $PODGL/lib/fsh.cfg.sh
+
+ls(){
+   tree -C
+}
+
+linux(){
+d="
+                                ${green}|------${cyan}Bind Shell            |
+${cyan}linux${green}-----|-------${cyan}Droppers${green}------| 		    	     |---Dropper Extensions (sh, py, perl, ruby)
+	  |     ${green}		|------${cyan}Reverse Shell         |
+	  |     		|			     |
+	  |     		|------${red}Super Malware${white}
+ 	  |
+          |--------------------------------------------------------------------------------------------------| ${blue}This is The Linux in-DGL-Modules Mapper${green}
+	  |
+          |			 |------------------> Victim Must Be Same ARCH As You, 32 Bit or 64 Bit${white}
+          | 			 |====${cyan}Reverse Shell
+          |			 |====${cyan}Bind Shell
+          |-----${cyan}Executables${white}------|====${red}Super Malware
+	  |     	|
+	  |		(Same ARCH with 32 and 64 bit Support)      
+          |
+          |-----${cyan}Trojans${white}--|
+			 |
+                         |
+			 |-------|---|-----------|
+				 |${cyan}Reverse Shell${white}  |
+				 |${cyan}Bind Shell${white}     |
+				 |${red}Super Malware${white}	 |
+				 ====================> ${red}Support ELF Injection 
+
+
+"
+printf "$d"
+}
+
+$1

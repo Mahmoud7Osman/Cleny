@@ -1,0 +1,27 @@
+source $PODGL/lib/colors
+source $PODGL/lib/fsh.cfg.sh
+
+cout Commands:
+d="
+  $green help   : $yellow This Message 
+  $green encrypt: $yellow Encrypt A File $green (Any File) $purple (INC 1271)
+  $green decrypt: $yellow Decrypt A File $green (Any File) $purple (DEC 1271)
+  $green victim : $yellow Set${red} Victim$yellow Address $green (V4) $purple (See info victim)
+  $green wifi   : $yellow Wifi Scanner & Connector $green (nmcli Based Script)
+  $green hack   : $yellow Binaries Automator ${red}Hacking${yellow} Script $green (No Arguments) $purple (bin/:run/)
+  $green camera : $yellow Generate ${red}Phishing${yellow} Links To open ${cyan}Webcamera ${green} (Festival Phishing)
+  $green phisher: $yellow Generate ${red}Phishing${yellow} Links To Steal Social Media Accounts
+  $green exploit: $yellow Manual ${cyan}Exploiting${yellow} Program ${green} (In bin/) $purple (REQUIRED ARGS: 3) $cyan (Automated By hack)
+  $green search : $yellow Search using Google Engine $green (1 ARG)  $purple (Target)
+  $green cout   : $yellow Print A  Success Message To Screen
+  $green cerr   : $yellow Print An ${red}Error$yellow Message To Screen 
+  $green clog   : $yellow Log A Message $green (File $PODGL/var/log/slog.dgl)
+  $green cby    : $yellow Print a Checkboxed message to screen
+  $green cbn    : $yellow Print a Uncheckboxed Message to screen
+  $green cin    : $yellow Digle Input
+  $green olog   : $yellow Print Logs
+  $green rlog   : $yellow Clear Logs
+  $green weather: $yellow Get Weather Info $green (1 ARG) $purple (Location)
+  $green update : $yellow Update ${red}Digle$yellow Framework
+"
+printf "$d"
