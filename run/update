@@ -36,10 +36,9 @@ xterm -T "WCC Installer" -e apt install gcc-mingw-w64-x86-64 g++-mingw-w64-x86-6
 printf $green"Done! " && sleep 0.5
 echo
 cout Compiling Sources....
-g++ etc/login/login.cpp -o etc/login/login
 
 for sources in $(ls $PODGL/sbin);do
-    g++ $PODGL/sbin/$sources -o $(echo $PODGL/bin/$sources | sed s/".cpp"/""/g)
+    g++ $PODGL/sbin/$sources -o $(echo $PODGL/bin/$sources | sed s/".cpp"/""/g) -fpermissive &> /dev/null
 done
 #g++ test.cpp -o test -I/usr/X11R6/include -I/usr/X11R6/include/X11 -L/usr/X11R6/lib -L/usr/X11R6/lib/X11 -lX11
 printf "cd $PODGL\n$PODGL/zstart.sh \$@" > /bin/digle && chmod 755 /bin/digle

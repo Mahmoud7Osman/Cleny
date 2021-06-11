@@ -1,0 +1,35 @@
+source $PODGL/lib/fsh.cfg.sh
+
+options(){
+cout Options:
+op="
+   ${green}Malware             ${white}:${yellow} $MALWARE
+   ${green}Malware Type        ${white}:${yellow} $TYPE
+   ${green}Victim IP Address   ${white}:${yellow} $VICTIM (Used also in listening)
+   ${green}Victim PORT         ${white}:${yellow} $PORT   (Used Also in listening)
+   ${green}Victim Platform     ${white}:${yellow} $PLATFORM
+   ${green}Victim ARCHITECTURE ${white}:${yellow} $ARCH
+" 
+printf "$op"
+}
+
+logs(){
+if [ -f "var/log/slog.bgl" ];then
+ cout "Opening Log Data Holder... (src = var/log/slog.bgl)"
+ cat $PODGL/var/log/slog.bgl
+else cerr "Logs Holder Dosn't Exists"
+fi
+}
+malwares(){
+d="$cyan Avalaible Malwares :
+
+   $green Droppers   $cyan: Linux - Windows - Termux - Android
+   $green Executables$cyan: Linux - Windows - Termux
+   $green Trojan     $cyan: Linux - Windows - Termux - Android
+   $green KeyLogger  $cyan: Linux - Windows
+
+"
+printf "$d"
+}
+
+$1
