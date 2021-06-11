@@ -15,9 +15,8 @@ export PS1="[$(whoami)]----> "
 export VICTIM=0.0.0.0
 export PORT=4444
 
-# Malware Spawner Handler's Envirenment Variables
+# Malware Builder Handler Data
 export MALWARE=""
 export TYPE=""
 export PLATFORM=""
 export ARCH=""
-

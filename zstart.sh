@@ -25,20 +25,12 @@ HISTFILE=$PODGL/var/digle_history
 set -o history
 
 
-# Simple Login System
-trap exit SIGINT
-cd $PODGL/etc/login/
-$PODGL/etc/login/login
-if [ "$?" == 1 ];then
-   cerr Password Incorrect..!
-   exit 1
-fi
 
 cd - &> /dev/null
 #
 
 # RC Script
-bash etc/rc.local
+digle etc/rc.local
 
 # INIT.D scripts
 for i in $(ls etc/init.d);do

@@ -24,15 +24,9 @@ printf $white"["$red" ✘ "$white"]$white %s\n" "$*"
 cin(){
 printf "$white┌──[$cyan$PWD$white]----[$green$VICTIM$white]-[$purple$PORT$white]\n└─"
 read -p "$(printf $PS1) " -e $1
-printf "$green"
+printf "$white"
 }
-olog(){
-if [ -f "var/log/slog.bgl" ];then
- cout "Opening Log Data Holder... (src = var/log/slog.bgl)"
- cat $PODGL/var/log/slog.bgl
-else cerr "Logs Holder Dosn't Exists"
-fi
-}
+
 rlog(){
 if [ -f "var/log/slog.bgl" ];then
  cout "Removing var/log/* ... !"
@@ -48,4 +42,7 @@ victim(){
   port)export PORT=$2;;
   *) cerr Invalid Usage;;
   esac
+}
+prepare(){
+   source $PODGL/etc/auto.dgl
 }
