@@ -12,11 +12,11 @@ struct stat file;
 
 int main(int argc, char**argv){
     if (argc<3){
-        cout << "Usage: dump  <ELF Or Object>  <Start Address>  <End Address>\n";
+        cout << "Usage: dump  <File>  <Start Address>  <End Address>\n";
         return -1;
     }
     long int start=strtol(argv[2], NULL, 0), end=strtol(argv[3], NULL, 0);
-    printf ("Start Point: %x\n[DEBUG] End Point: %x\n", start, end);
+    printf ("Start Point: %x\nEnd Point: %x\nDumping....\nStored in './data'\n", start, end);
     int tmp=0;
     if (0<=(start-end)){
         cout << "Invalid Start or End Address\n";
