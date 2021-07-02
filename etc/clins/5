@@ -1,0 +1,4 @@
+cin(){
+  printf "$white($green$(printf $PWD)$white)$red==>"
+  read -p " " -e $1
+}

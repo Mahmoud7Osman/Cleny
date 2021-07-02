@@ -1,0 +1,4 @@
+cin(){
+  printf "${white}┌──($green$VICTIM$white)==($green$PORT$white)==($green$WHAT$white)==($green$MALWARE$white)==($green$PLATFORM$white)==($green$ARCH$white)==($green$TARGET$white)==($green$SYSTEM$white)----[${red}Digital Eagle${white}]\n└─>>>>"
+  read -p " " -e $1
+}

@@ -1,0 +1,4 @@
+cin(){
+  printf "${red}(/${white}Fuck${red})${green}>"
+  read -p " " -e $1
+}

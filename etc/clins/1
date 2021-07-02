@@ -1,0 +1,6 @@
+cin(){
+  printf "$green(${red}Killer$green)"
+  printf "►╦╤─"
+  printf "$white"
+  read -p " " -e $1
+}

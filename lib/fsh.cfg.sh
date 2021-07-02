@@ -22,8 +22,8 @@ printf $white"["$red" ✘ "$white"]$white %s\n" "$*"
 }
 
 cin(){
-printf "$white┌──[$cyan$PWD$white]----[$green$VICTIM$white]-[$purple$PORT$white]\n└─"
-read -p "$(printf $PS1) " -e $1
+printf "$white┌──[$cyan$PWD$white]----[$green$VICTIM$white]-[$purple$PORT$white]\n└─>>>>"
+read -p " " -e $1
 printf "$white"
 }
 
@@ -44,5 +44,32 @@ victim(){
   esac
 }
 prepare(){
+   cout "Preparing Automated Values from $PODGL/etc/auto.dgl"
    source $PODGL/etc/auto.dgl
+}
+
+lset(){
+ if [ "$1" == '' ] || [ "$2" == '' ];then
+    cerr No Enough Arguments, see info lset
+
+ else
+ export ${1^^}=$2 2>/dev/null
+ printf "${green}$1${cyan} => ${yellow}$2\n"
+ fi
+}
+use(){
+if [ ! -d "$PODGL/sys/$1" ];then
+   cerr "Error: Cannot Use Module '$1', Module not found"
+elif [ "$1" == '' ];then
+   printf "${green}use$yellow malware\n${green}use$yellow bombs\n"
+else
+export WHAT=$1
+fi
+}
+prompt(){
+if [ "$1" == '' ] || [ ! -f "$PODGL/etc/clins/$1" ];then
+   cerr "Error!, Execute 'show prompts'"
+else
+source $PODGL/etc/clins/$1
+fi
 }

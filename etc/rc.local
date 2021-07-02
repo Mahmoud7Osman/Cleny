@@ -1,6 +1,9 @@
+source $PODGL/lib/fsh.cfg.sh
+source $PODGL/lib/colors
+
 # Run Commands Before shell Startup
 # Like Openning Another Terminal And So on
 # Start Typing Your Commands here:
-
+source c
 
 # 
