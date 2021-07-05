@@ -26,7 +26,7 @@ set -o history
 
 
 
-cd - &> /dev/null
+#cd - &> /dev/null
 #
 
 # RC Script
