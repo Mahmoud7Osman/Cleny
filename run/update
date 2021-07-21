@@ -31,6 +31,7 @@ apt install clang -y    &> /dev/null
 apt install objdump -y &> /dev/null
 apt install netcat -y &> /dev/null
 apt install tree -y  &> /dev/null
+apt install libncurses-dev &> /dev/null
 
 xterm -T "WCC Installer" -e apt install gcc-mingw-w64-x86-64 g++-mingw-w64-x86-64 -y
 printf $green"Done! " && sleep 0.5
@@ -40,7 +41,7 @@ cout Compiling Sources....
 for sources in $(ls $PODGL/sbin);do
     g++ $PODGL/sbin/$sources -o $(echo $PODGL/bin/$sources | sed s/".cpp"/""/g) -fpermissive -lncurses &> /dev/null
 done
-#g++ test.cpp -o test -I/usr/X11R6/include -I/usr/X11R6/include/X11 -L/usr/X11R6/lib -L/usr/X11R6/lib/X11 -lX11
+
 printf "cd $PODGL\n$PODGL/zstart.sh \$@" > /bin/digle && chmod 755 /bin/digle
 printf "$PODGL/bin/\n$PODGL/run/" > etc/PATH.dgl
 chmod +x etc/init.d/*
