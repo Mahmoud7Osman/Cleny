@@ -4,14 +4,14 @@ source $PODGL/lib/colors
 # Here You Can Set Your Own Envirenment Variables to work with
 # Envirenment Variables
 
-export VICTIM=0.0.0.0
+export VICTIM='0.0.0.0      '
 export PORT=4444
 # Type Of File to Build, Malware or Bomb
 export WHAT=""
 
 # Malware Builder Handler Data
-export MALWARE=""
-export TYPE=""
+export MALWARE="             "
+export TYPE="             "
 export PLATFORM=""
 export ARCH=""
 
