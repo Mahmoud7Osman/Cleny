@@ -133,6 +133,7 @@ char* StrRep(char *str,const char *src,const char *trg){
            strcat (newstr, str+i+tmp2);
         }
     }
+    free(str);
     return newstr;
 }
 

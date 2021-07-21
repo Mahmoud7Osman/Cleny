@@ -20,7 +20,7 @@ int main(int argc, char *argv[]){
      if (argc < 2) return error();
      const char *pwd=getenv(DP);
      chdir(pwd);
-     FILE *pf=fopen("etc/login/pass.dl","w");
+     FILE *pf=fopen("etc/passwd","w");
      fwrite(argv[1], strlen(argv[1]), 1, pf);
      return fclose(pf);
 }

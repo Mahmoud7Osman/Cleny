@@ -22,9 +22,11 @@ printf $white"["$red" ✘ "$white"]$white %s\n" "$*"
 }
 
 cin(){
-printf "$white┌──[$cyan$PWD$white]----[$green$VICTIM$white]-[$purple$PORT$white]\n└─>>>>"
-read -p " " -e $1
-printf "$white"
+printf "┌$white──[$cyan$PWD$white]----[$blgreen$(printf $VICTIM | sed s/" "//g)$white]-[$blpurple$PORT$white]\n▼\n$mag"
+read -e $1
+sleep 0.05
+printf "$green↓$yellow\n"
+sleep 0.05
 }
 
 rlog(){
