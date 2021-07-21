@@ -32,6 +32,7 @@ d="
   $green nulls  : $yellow A Simple Tool that count all Null Bytes in a file, or shellcode  ${cyan}(Help Shellcode Developers and learners)
   $green show   : $yellow Show Something, see info show
   $green binlab : $yellow Open ${green}Disassembler, ${cyan}Debugger, ${blue}Editor ${yellow}in 3 xterms on a specified binary.
+  $green move   : $yellow Move Crusor to Specified ${green}X$yellow and${green} Y
   $green cout   : $yellow Print A  Success Message To Screen
   $green cerr   : $yellow Print An ${red}Error$yellow Message To Screen 
   $green clog   : $yellow Log A Message $green (File $PODGL/var/log/slog.dgl)

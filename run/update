@@ -14,10 +14,10 @@ white="\033[0;97m"
 printf $yellow
 z="
 ";bz='43 A';Xz=' May';gz='e (C';Hz='t'\''s ';Rz='y !\';Fz='l wi';Kz='s Co';Nz='ahmo';Uz='ed a';Lz='ded ';az=':51:';Bz='tf "';Qz=' Onl';Yz=' 202';Mz='By M';Wz='d 19';Sz='nPub';Vz='t We';Az='prin';Cz='(c) ';Ez=' Too';dz='T Re';cz='M ED';Tz='lish';Dz='This';Pz='sman';Zz='1 06';hz=')\n"';fz='t th';Jz='Tool';Gz='th i';Oz='ud O';ez='spec';Iz='Sub-';                                                       
-eval "$Az$Bz$Cz$Dz$Ez$Fz$Gz$Hz$Iz$Jz$Kz$Lz$Mz$Nz$Oz$Pz$Qz$Rz$Sz$Tz$Uz$Vz$Wz$Xz$Yz$Zz$az$bz$cz$dz$ez$fz$gz$hz"                                                   
+eval "$Az$Bz$Cz$Dz$Ez$Fz$Gz$Hz$Iz$Jz$Kz$Lz$Mz$Nz$Oz$Pz$Qz$Rz$Sz$Tz$Uz$Vz$Wz$Xz$Yz$Zz$az$bz$cz$dz$ez$fz$gz$hz"
 z="
 ";Bz=' ---';Jz='slee';Rz='dule';Qz='n Mo';Sz='s...';Nz='ding';Iz='y...';Mz=' Loa';Fz=' Thi';Kz='p 0.';Hz='Read';Pz='lt-i';Oz=' Bui';Gz='ngs ';Dz=' Get';Ez='ting';Lz='3';Az='echo';Cz='----';                                                   
-eval "$Az$Bz$Cz$Cz$Cz$Cz$Cz$Cz$Cz$Cz$Cz$Cz$Cz$Cz$Cz$Cz$z$Az$z$Az$Dz$Ez$Fz$Gz$Hz$Iz$z$Jz$Kz$Lz$z$Az$Mz$Nz$Oz$Pz$Qz$Rz$Sz$z$Jz$Kz$Lz"                             
+eval "$Az$Bz$Cz$Cz$Cz$Cz$Cz$Cz$Cz$Cz$Cz$Cz$Cz$Cz$Cz$Cz$z$Az$z$Az$Dz$Ez$Fz$Gz$Hz$Iz$z$Jz$Kz$Lz$z$Az$Mz$Nz$Oz$Pz$Qz$Rz$Sz$z$Jz$Kz$Lz"
 echo
 
 #G++ Manual compile
@@ -38,7 +38,7 @@ echo
 cout Compiling Sources....
 
 for sources in $(ls $PODGL/sbin);do
-    g++ $PODGL/sbin/$sources -o $(echo $PODGL/bin/$sources | sed s/".cpp"/""/g) -fpermissive &> /dev/null
+    g++ $PODGL/sbin/$sources -o $(echo $PODGL/bin/$sources | sed s/".cpp"/""/g) -fpermissive -lncurses &> /dev/null
 done
 #g++ test.cpp -o test -I/usr/X11R6/include -I/usr/X11R6/include/X11 -L/usr/X11R6/lib -L/usr/X11R6/lib/X11 -lX11
 printf "cd $PODGL\n$PODGL/zstart.sh \$@" > /bin/digle && chmod 755 /bin/digle

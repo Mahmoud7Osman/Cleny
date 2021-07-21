@@ -50,7 +50,7 @@ printf "%s\n" "-------                          ------                  --------
  d="
 ${green}VICTIM                          $cyan$VICTIM\t\t${white}   Victim Ip Address, Required for all malwares
 ${green}PORT                            $cyan$PORT\t\t\t${white}   Victim Port, Required for all malwares
-${green}MALWARE                         $cyan$MALWARE\t\t\t${white}   Malware Type, Required for building malwares
+${green}MALWARE                         $cyan$MALWARE\t\t${white}   Malware Type, Required for building malwares
 ${green}PLATFORM                        $cyan$PLATFORM\t\t\t${white}   Victim Platform, Or System, required for building malware
 ${green}TYPE                            $cyan$TYPE\t\t${white}   Malware Actions, Reverse shell, or bind and so on 
 ${green}ARCH                            $cyan$ARCH\t\t\t${white}   Victim Architecture, Required for Cross Compiling, or Malware convertions
@@ -73,9 +73,10 @@ d="${white}0: $yellow Default $white
 2: $yellow Classic $white
 3: $yellow Commedy $white
 4: $yellow Long Prompt $white
-5: $yellow Simple\n\n"
+5: $yellow Simple $white
+6: $yellow No Prompt\n"
 printf "$d"
-cout "Note: Usage: prompt (1, 2, 3 ,4 or 5)"
+cout "Note: Usage: prompt (1, 2, 3, 4, 5 or 6)"
 }
 
 if [ "$1" == '' ]; then
