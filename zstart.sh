@@ -7,7 +7,6 @@ export PODGL=$PWD
 # Shell Variables & Built-in Functions
 
 source $PODGL/lib/fsh.cfg.sh
-source $PODGL/etc/envir
 source $PODGL/lib/colors2
 
 if [ "$1" != '' ];then
@@ -22,7 +21,7 @@ cat etc/motd
 
 # History
 HISTFILE=$PODGL/var/digle_history
-set -o history
+#set -o history
 
 
 
@@ -30,11 +29,14 @@ set -o history
 #
 
 # RC Script
-digle etc/rc.local
+#digle etc/rc.local
 
 # INIT.D scripts
-for i in $(ls etc/init.d);do
-   etc/init.d/$i
+for i in $(ls $PODGL/etc/init.d);do
+   $PODGL/etc/init.d/$i
+   if [ "$?" == 1 ];then
+      exit 1
+   fi
 done
 
 # Aliases
@@ -44,7 +46,6 @@ alias grep="grep --color"
 trap test SIGINT &> /dev/null
 
 # SHELL
-history -c
 tcheck(){
 if [ -d "$1" ];then
      cd $1
@@ -64,7 +65,8 @@ if [ -f ".update" ];then
 fi
 
 
-
+history -c
+source $PODGL/etc/envir
 while [ 1 ]; do
  cin cmd
  if [ "$cmd" == "" ];then
@@ -79,7 +81,7 @@ while [ 1 ]; do
       if [ "$path" == "$(/bin/tail -1 $PODGL/etc/PATH.dgl)" ] && [ ! -f "$(/bin/tail -1 $PODGL/etc/PATH.dgl)$cmd" ];then
 	 type $(echo $cmd | head -n1 | awk '{print $1;}') &> /dev/null
          if [ "$?" != 0 ];then
-              cerr "$red$(echo $cmd | head -n1 | awk '{print $1;}')$white Command Execution Error: Command Not Found"
+              cerr "$cmd: Command Not Found"
          else
               $cmd
               history -s $cmd
