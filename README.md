@@ -9,3 +9,5 @@ Digle Can Spawn Malwares, From a specified type, Like saying to digle to spawn a
 Digle Have a tool to inject Files with Each Others, Helping User to inject a pre-spawned malware in a specified file or script.
 
 Digle is an Ocean, It will Help You a lot, in Low-Level Stuff, like if you're now trying to exploit a buffer overflow But it's Hard, This Tool Will Be Your Weapon..!
+
+Just Press Star To Support Me :) And Git Clone It !!
