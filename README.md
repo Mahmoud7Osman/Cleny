@@ -3,7 +3,7 @@ Digle, Provide a Massive and Perfect Tools, helping basicly Low-Level Hackers, P
 
 Recommented System to run Digle: Any Linux Distro with any desktop environment, it support Termux but There are some tools Does not work in termux
 
-First, Digle Is Programmed in a way to help each tool to Exchange, Manipulate, Fix, Delete Data in the Digle Environment, And Automating To Many Tasks without User Interaction
+First, Digle Is Programmed in a way to help each tool to Exchange, Manipulate, Fix, Delete Data in the Digle Environment, And Automating Many Tasks without User Interaction
 Digle Can Spawn Malwares, From a specified type, Like saying to digle to spawn a windows executable that log keystrokes, Or Open a Reverse Shell, Or saying to spawn a Dropper that Inject some System Files
 
 Digle Have a tool to inject Files with Each Others, Helping User to inject a pre-spawned malware in a specified file or script.
