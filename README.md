@@ -17,6 +17,7 @@ Digle Have a tool to inject Files with Each Others, Helping User to inject a pre
 
 <h2> Analyze, Debug, Disassemble, Reverse Binaries With Digle, (GDB, Objdump, ncurses-hexeditor, Digle-Klab in 4 Xterms)</h2>
 <img src=media/sct/2.png>
+<h2>Contain Information Drawing Required for every Binary Exploitation Work Or Embedeed Systems Programmers</h2> 
+<img src=media/sct/6.png>
 
-<h2> 
 Digle is an Ocean, It will Help You a lot, in Low-Level Stuff, like if you're now trying to exploit a buffer overflow But it's Hard, This Tool Will Be Your Weapon..!
