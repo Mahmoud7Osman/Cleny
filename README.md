@@ -5,10 +5,11 @@ Recommented System to run Digle: Any Linux Distro with any desktop environment, 
 
 First, Digle Is Programmed in a way to help each tool to Exchange, Manipulate, Fix, Delete Data in the Digle Environment, And Automating Many Tasks without User Interaction
 
-<h5>Digle Can Spawn Malwares, From a specified type, Like saying to digle to spawn a windows executable that log keystrokes, Or Open a Reverse Shell, Or saying to spawn a Dropper that Inject some System Files</h5>
+<h4>- Digle Can Spawn Malwares, From a specified type, Like saying to digle to spawn a windows executable that log keystrokes, Or Open a Reverse Shell, Or saying to spawn a Dropper that Inject some System Files</h4>
 
-<h5>Digle Provide Phishing Tools, Phishing Web Camera, Or Social Media's Accounts</h5>
-
+<h4>- Digle Provide Phishing Tools, Phishing Web Camera, Or Social Media's Accounts</h4>
+<h4>- Digle Provide Scripting Engine, Enabling Shell Programmers to move cursor from one location to another one easilly, and much more </h4>
+<h4>- Digle's Malwares are intelligent, they hide themselves, they detect Virtual Machines or Virtual Environment, They can inject themselves in a working running REAL Process</h4>
 Digle Have a tool to inject Files with Each Others, Helping User to inject a pre-spawned malware in a specified file or script.
 <h2> "ACIC", All Commands In One Commands, The Digle INTELLIGENT Helping </h2>
 <img src=media/sct/5.png>
