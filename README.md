@@ -7,7 +7,8 @@ First, Digle Is Programmed in a way to help each tool to Exchange, Manipulate, F
 Digle Can Spawn Malwares, From a specified type, Like saying to digle to spawn a windows executable that log keystrokes, Or Open a Reverse Shell, Or saying to spawn a Dropper that Inject some System Files
 
 Digle Have a tool to inject Files with Each Others, Helping User to inject a pre-spawned malware in a specified file or script.
-
+<h2> "ACIC" All Commands In One Commands, The Digle INTELLIGENT Helping </h2>
+<img src=media/sct/5.png>
 <h2> Control Phones With Digle: </h2>
 
 <img src=media/sct/1.png>
