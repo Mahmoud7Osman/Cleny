@@ -10,7 +10,7 @@ Digle Have a tool to inject Files with Each Others, Helping User to inject a pre
 
 <h2> Control Phones With Digle: </h2>
 
-<img src=media/sct/1.png></img>
+<img src=media/sct/1.png>
 
 <h2> Analyze, Debug, Disassemble, Reverse Binaries With Digle, (GDB, Objdump, ncurses-hexeditor, Digle-Klab in 4 Xterms)</h2>
 <img src=media/sct/2.png>
