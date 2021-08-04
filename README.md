@@ -24,4 +24,6 @@ First, Digle Is Programmed in a way to help each tool to Exchange, Manipulate, F
 <img src=media/sct/6.png>
 <h2>See Weather Info From Your Terminal</h2>
 <img src=media/sct/7.png>
+<h2>Bombing, Getting Fun with Crashing Systems with Digle Bombs</h2>
+<img src=media/sct/Screenshot_2021-08-04_22_25_19.png>
 Digle is an Ocean, It will Help You a lot, in Low-Level Stuff, like if you're now trying to exploit a buffer overflow But it's Hard, This Tool Will Be Your Weapon..!
