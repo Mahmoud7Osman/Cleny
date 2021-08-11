@@ -22,18 +22,16 @@ printf $white"["$red" ✘ "$white"]$white %s\n" "$*"
 }
 
 cin(){
-printf "┌$white──[$cyan$PWD$white]----[$blgreen$(printf $VICTIM | sed s/" "//g)$white]-[$blpurple$PORT$white]\n▼\n$mag"
+printf "┌$white──[$purple$PWD$white]----[$blue$(printf $VICTIM | sed s/" "//g)$white]-[$red$PORT$white]\n$white▼$white\n$green"
 read -e $1
-sleep 0.05
-printf "$green↓$yellow\n"
-sleep 0.05
+printf "$blyellow↓$green\n"
 }
 
 rlog(){
 if [ -f "var/log/slog.bgl" ];then
  cout "Removing var/log/* ... !"
  sleep 0.3
- rm $PODGL/var/log/* $PODGL/var/digle_history
+ rm $PODGL/var/log/* $PODGL/var/digle_history &> /dev/null
 else cerr "No Logs Found"
 fi
 }
@@ -74,4 +72,10 @@ if [ "$1" == '' ] || [ ! -f "$PODGL/etc/clins/$1" ];then
 else
 source $PODGL/etc/clins/$1
 fi
+}
+say(){
+  timeout 5 morse -f 400 a
+  espeak -v en-us "\"$@\""
+  timeout 5 morse -f 400 n
+  killall -9 morse &> /dev/null
 }

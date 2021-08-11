@@ -4,11 +4,11 @@
 
 #include <sys/socket.h>
 #include <sys/stat.h>
-
 #include <netinet/in.h>
 #include <arpa/inet.h>
 
 #include <unistd.h>
+#include <ncurses.h>
 
 #include "../lib/include/colors.h"
 
@@ -17,40 +17,45 @@ using std::thread;
 
 
 // Prototypes
-void CreateRoom(struct sockaddr_in* address);
+void CreateRoom(struct sockaddr_in* address);  // Fined
 void JoinRoom(struct sockaddr_in* address);
 
 char *GetMsg(void);
-void ProcMsg(char *msg);
-void SyncMsg(struct sockaddr_in* address);
+char *ProcMsg(char *msg);                       // Fined
+void SyncMsg();
 void SendMsg(char *msg);
 
-void CheckLen(char *msg);
-
-char* GetName(struct sockaddr_in* address, int code);
 char* GetPath(void);
 
 void JoinRoom(struct sockaddr_in* address, int port);
-void InitInfo(struct sockaddr_in* address, int sfd );
+void InitRoom();    //Fined
 
-char* StrRep(char* str, char* src, char* trg);
+char* StrRep(char* str,const char* src,const char* trg); //Fined
 // END
 
 
-// Global Variables
-char *id;
+// Program Global Data
+
+char *id=(char*)malloc(16), *eid=(char*)malloc(16);
 
 int sfd, client;
 
 struct sockaddr_in trg={.sin_family=AF_INET, .sin_port=5566};
 socklen_t addrsize=sizeof(struct sockaddr_in);
-// END
+
+// Threads
 
 
 // Program
 int main(int argc, char *argv[]){
+        thread syncmsg(SyncMsg);
+
         sfd=socket(AF_INET, SOCK_STREAM, 0);
-        struct sockaddr_in addr={.sin_family=AF_INET, .sin_port=5566 ,.sin_addr.s_addr=0};
+        struct sockaddr_in addr={.sin_family=AF_INET, .sin_port=5566};
+        addr.sin_addr.s_addr=0;
+
+        free(id);
+        free(eid);
 	return 0;
 }
 
@@ -61,28 +66,30 @@ void CreateRoom(struct sockaddr_in* address, int fd){
        printf ("%sError Binding %siChat%s Socket%s", KCYN, BGRN, BBLK, KNRM);
        exit(1);
     }
-    listen(1);
-    client=accept(sfd, (struct sockaddr*)&trg, (socklen_t*)&addrsize);
+    listen(1, sfd);
+    client=accept(sfd, (struct sockaddr*)&trg, &addrsize);
     if (client==-1){
      printf ("%sError Handling %siChat%s Client%s", KCYN, BGRN, BBLK, KNRM);
      exit(1);
     }
-    InitInfo(address, client);
+    InitRoom();
 }
-void InitInfo(struct sockaddr_in* address){
-    char *id=getenv("ONLINE_ID");
-    *(id+15)=NULL;
-    if (*id==NULL){
-      printf ("%sError Getting Your %siChat%s Online ID, Try export ONLINE_ID=[your name] then running\n%s", KCYN, BGRN, BBLK, KNRM);
+void InitRoom(){
+    id=getenv("ONLINE_ID");
+
+    if (*id==0x00){
+      printf ("%sError Getting Your %siChat%s Online ID, Try lset ONLINE_ID [your name] or type isetup\n%s", KCYN, BGRN, BBLK, KNRM);
       exit(1);
     }
-    send(client, id, strlen(id));
-
+    *(id+16)=0x00;
+    send(client, id, 16, 0);
+    recv(client, eid,16, 0);
+    initscr();
 }
 
 
-
-void ProcMsg(char *msg){
+/*
+char* ProcMsg(char *msg){
    msg=StrRep(msg, "/blink", LNRM);
    msg=StrRep(msg, "/blred", LRED);
    msg=StrRep(msg, "/blblue", LBLU);
@@ -120,11 +127,13 @@ void ProcMsg(char *msg){
 
    return msg;
 }
+*/
 char* StrRep(char *str,const char *src,const char *trg){
     int tmp1=strlen(str),tmp2=strlen(src), tmp3=strlen(trg);
 
     int newsize=tmp1-tmp2+tmp3;
-    char *newstr=(char*)malloc(newsize);
+    char *newstr=(char*)malloc(newsize+1);
+    *(newstr+newsize)=0x00;
 
     for (int i=0; i<=tmp1; i++){
         if (strncmp((str+i), src, strlen(src))==0){
@@ -140,7 +149,10 @@ char* StrRep(char *str,const char *src,const char *trg){
 
 
 char* GetMsg(void){
-  
+    printw("%s[%s%s%s] ", KNRM, KGRN,id, KNRM);
+    char *msg=(char *)malloc(201);
+    getnstr(msg, 200);
+    return msg;
 }
 
 // END

@@ -4,6 +4,7 @@
 #define KGRN  "\x1B[92m"
 #define KYEL  "\x1B[33m"
 #define KBLU  "\x1B[34m"
+#define KPUR  "\x1B[35m"
 #define KMAG  "\x1B[35m"
 #define KCYN  "\x1B[36m"
 #define KWHT  "\x1B[97m"

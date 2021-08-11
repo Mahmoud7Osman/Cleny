@@ -15,11 +15,11 @@ int main(int argc, char**argv){
         cout << "Usage: dump  <File>  <Start Address>  <End Address>\n";
         return -1;
     }
-    long int start=strtol(argv[2], NULL, 0), end=strtol(argv[3], NULL, 0);
+    long long int start=strtol(argv[2], NULL, 0), end=strtol(argv[3], NULL, 0);
     printf ("Start Point: %x\nEnd Point: %x\nDumping....\nStored in './data'\n", start, end);
     int tmp=0;
     if (0<=(start-end)){
-        cout << "Invalid Start or End Address\n";
+        cerr << "Invalid Start or End Address\n";
         return -1;
     }
     stat(argv[1], &file);
@@ -31,11 +31,10 @@ int main(int argc, char**argv){
     read(src, data, file.st_size);
     start+=data; end+=data;
     while (dt!=start && tmp < file.st_size){
-      printf ("Byte: %p\n",dt++);
       tmp++;
     }
     if (dt!=start){
-      cout << "Error Start Location Not Found\n";
+      cerr << "Error: Start Location Not Found\n";
       free(data);
       return -1;
     }
