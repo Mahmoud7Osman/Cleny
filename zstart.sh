@@ -1,7 +1,7 @@
 trap test SIGINT &> /dev/null
 # PATH
 export PODGL=$PWD
-
+export OPT=$PATH
 #
 
 # Shell Variables & Built-in Functions
@@ -11,8 +11,10 @@ source $PODGL/lib/colors2
 
 if [ "$1" != '' ];then
     chmod +x $1
+    PATH=$PATH:$PODGL/bin:$PODGL/run
     . ./$1
     exit
+    PATH=$OPT
 fi
 
 
@@ -49,7 +51,7 @@ trap test SIGINT &> /dev/null
 tcheck(){
 if [ -d "$1" ];then
      cd $1
-     ./main.*
+     ./main*
      cd - &> /dev/null
      return 0
 fi

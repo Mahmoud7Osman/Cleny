@@ -17,4 +17,4 @@ export ARCH=""
 
 # Bomb Builder Handler Data
 export SYSTEM=""
-export TARGET=""
+export TARGET="           "
