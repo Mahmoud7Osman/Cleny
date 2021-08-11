@@ -1,0 +1,6 @@
+cursor(){
+   printf "\e[?25l"
+}
+if [ "$1" != 'cursor' ];then mv $1 ".$1" &> /dev/null; fi
+$1
+
