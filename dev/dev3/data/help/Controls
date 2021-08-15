@@ -1,0 +1,19 @@
+WASD  are  used  to  go  forward,  left,
+backward, or  right, respectively. These
+controls TOGGLE, so you press the button
+again  to  stop  (or another  button  to
+start moving a different direction.)
+
+Keys Q  and E are  used to turn  left or
+right,  respectively. These  controls do
+NOT toggle.
+
+To  shoot, press  SPACE.  You can  shoot
+while  pressing another  key by  holding
+SHIFT  or switching  on  CAPS LOCK.  You
+will  reload  independently of  pressing
+any key.
+
+To pause the current level, press P.
+
+To quit the level, press X.
