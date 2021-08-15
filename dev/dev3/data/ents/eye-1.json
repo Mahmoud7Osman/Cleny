@@ -1,0 +1,25 @@
+{
+ "name": "Eyeball Stage 1",
+ "team_override": "enemy",
+ "width": 1,
+ "height": 1,
+ "shoot_chance": 1.1,
+ "turn_chance": 0.6,
+ "speed": -0.08,
+ "death_spawn": "eye-1-die",
+ "health": 6,
+ "damage": 0.02,
+ "bullet": "frog",
+ "frames": [
+  ["eye-1", 9],
+  ["eye-2", 5],
+  ["eye-3", 3],
+  ["eye-4", 3],
+  ["eye-5", 5],
+  ["eye-6", 9],
+  ["eye-5", 5],
+  ["eye-4", 3],
+  ["eye-3", 3],
+  ["eye-2", 5]
+ ]
+}

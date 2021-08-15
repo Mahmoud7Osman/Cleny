@@ -1,0 +1,27 @@
+{
+ "name": "Bat",
+ "width": 0.3,
+ "height": 0.15,
+ "shoot_chance": 1,
+ "turn_chance": 1.5,
+ "speed": 0.008,
+ "death_spawn": "spirit",
+ "health": 3,
+ "damage": 0.01,
+ "bullet": "bullet",
+ "random_start_frame": true,
+ "frames": [
+  ["bat-wings-1", 7],
+  ["bat-wings-2", 4],
+  ["bat-wings-3", 2],
+  ["bat-wings-4", 1],
+  ["bat-wings-5", 2],
+  ["bat-wings-6", 3],
+  ["bat-wings-7", 4],
+  ["bat-wings-6", 3],
+  ["bat-wings-5", 2],
+  ["bat-wings-4", 1],
+  ["bat-wings-3", 2],
+  ["bat-wings-2", 4]
+ ]
+}

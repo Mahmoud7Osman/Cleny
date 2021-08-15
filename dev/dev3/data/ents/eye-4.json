@@ -1,0 +1,21 @@
+{
+ "name": "Eyeball Stage 4",
+ "team_override": "enemy",
+ "width": 1,
+ "height": 1,
+ "shoot_chance": 0.75,
+ "turn_chance": 1.6,
+ "speed": -0.092,
+ "death_spawn": "eye-4-die",
+ "health": 5,
+ "damage": 0.02,
+ "bullet": "demon",
+ "frames": [
+  ["eye-1", 2],
+  ["eye-2", 2],
+  ["eye-5", 2],
+  ["eye-6", 2],
+  ["eye-5", 2],
+  ["eye-2", 2]
+ ]
+}
