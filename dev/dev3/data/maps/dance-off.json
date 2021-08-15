@@ -1,0 +1,51 @@
+{
+ "prereq": "all-sides",
+ "blocks": [
+  {
+   "name": "wall",
+   "all_solid": true,
+   "all": "tiles-blue"
+  },
+  {
+   "name": "floor",
+   "top": "center-square",
+   "bottom": "center-square"
+  },
+  {
+   "name": "hall-end",
+   "east_solid": true,
+   "north": "brick-red",
+   "east": "brick-red",
+   "top": "tiles-blue",
+   "bottom": "tiles-blue"
+  },
+  {
+   "name": "hall",
+   "north": "brick-red",
+   "south": "brick-red",
+   "top": "tiles-blue",
+   "bottom": "tiles-blue"
+  }
+ ],
+ "layout": [
+  [0,2,3,3,3,3,3,2],
+  [0,0,0,0,0,0,0,1,0,0,0,0,0],
+  [0,1,1,1,1,1,1,1,1,1,1,1,0],
+  [0,1,1,1,1,1,1,1,1,1,1,1,0],
+  [0,1,1,1,1,1,1,1,1,1,1,1,0],
+  [0,1,1,1,1,1,1,1,1,1,1,1,0],
+  [0,1,1,1,1,1,1,1,1,1,1,1,0],
+  [0,0,0,0,0,0,0,0,0,0,0,0,0]
+ ],
+ "player": {
+  "kind": "player",
+  "pos": [2.5, 0.5]
+ },
+ "ents": [
+  {
+   "kind": "demon",
+   "team": "enemy",
+   "pos": [1.5, 6.5]
+  }
+ ]
+}

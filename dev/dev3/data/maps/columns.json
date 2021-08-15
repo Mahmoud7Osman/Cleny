@@ -1,0 +1,61 @@
+{
+ "prereq": "gobstop",
+ "blocks": [
+  {
+   "name": "wall",
+   "all_solid": true,
+   "all": "brick-red"
+  },
+  {
+   "name": "floor",
+   "top": "tiles-blue",
+   "bottom": "tiles-blue"
+  },
+  {
+   "name": "pillar",
+   "all_solid": true,
+   "all": "pillar-gray"
+  }
+ ],
+ "layout": [
+  [0,0,0,0,0,0,0],
+  [0,1,1,1,1,1,0],
+  [0,1,1,1,1,1,0],
+  [0,1,1,2,1,1,0],
+  [0,1,1,1,1,1,0],
+  [0,1,1,1,1,1,0],
+  [0,0,0,1,0,0,0],
+  [0,1,1,1,1,1,0],
+  [0,1,1,1,1,1,0],
+  [0,1,1,2,1,1,0],
+  [0,1,1,1,1,1,0],
+  [0,1,1,1,1,1,0],
+  [0,0,0,0,0,0,0]
+ ],
+ "player": {
+  "kind": "player",
+  "pos": [2.5, 10.5]
+ },
+ "ents": [
+  {
+   "kind": "goblin",
+   "team": "enemy",
+   "pos": [2.5, 1.5]
+  },
+  {
+   "kind": "bat",
+   "team": "enemy",
+   "pos": [2.5, 8.5]
+  },
+  {
+   "kind": "goblin",
+   "team": "enemy",
+   "pos": [1.5, 8.5]
+  },
+  {
+   "kind": "bat",
+   "team": "enemy",
+   "pos": [2.5, 5.5]
+  }
+ ]
+}

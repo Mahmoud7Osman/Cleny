@@ -1,0 +1,85 @@
+{
+ "prereq": "2-trouble",
+ "blocks": [
+  {
+   "name": "wall",
+   "all_solid": true,
+   "all": "tiles-blue"
+  },
+  {
+   "name": "floor",
+   "top": "center-square",
+   "bottom": "center-square"
+  },
+  {
+   "name": "column",
+   "all_solid": true,
+   "all": "pillar-gray"
+  }
+ ],
+ "layout": [
+  [0,0,0,0,0,0,0,0,0,0,0,0,0],
+  [0,1,1,1,1,1,1,1,1,1,1,1,0],
+  [0,1,2,1,1,1,1,1,1,1,2,1,0],
+  [0,1,1,1,1,1,1,1,1,1,1,1,0],
+  [0,1,1,1,1,1,1,1,1,1,1,1,0],
+  [0,1,1,1,1,1,1,1,1,1,1,1,0],
+  [0,1,2,1,1,1,1,1,1,1,2,1,0],
+  [0,1,1,1,1,1,1,1,1,1,1,1,0],
+  [0,0,0,0,0,0,0,0,0,0,0,0,0]
+ ],
+ "player": {
+  "kind": "player",
+  "pos": [1.5, 4.5]
+ },
+ "ents": [
+  {
+   "kind": "frog",
+   "team": "enemy",
+   "pos": [3.5, 3.5]
+  },
+  {
+   "kind": "frog",
+   "team": "enemy",
+   "pos": [3.5, 5.5]
+  },
+  {
+   "kind": "goblin",
+   "team": "enemy",
+   "pos": [5.5, 3.5]
+  },
+  {
+   "kind": "goblin",
+   "team": "enemy",
+   "pos": [5.5, 5.5]
+  },
+  {
+   "kind": "demon",
+   "team": "enemy",
+   "pos": [7.5, 3.5]
+  },
+  {
+   "kind": "demon",
+   "team": "enemy",
+   "pos": [7.5, 5.5]
+  },
+  {
+   "kind": "bat",
+   "team": "enemy",
+   "pos": [9.5, 3.5]
+  },
+  {
+   "kind": "bat",
+   "team": "enemy",
+   "pos": [9.5, 5.5]
+  },
+  {
+   "kind": "health",
+   "pos": [11.5, 3.5]
+  },
+  {
+   "kind": "health",
+   "pos": [11.5, 5.5]
+  }
+ ]
+}

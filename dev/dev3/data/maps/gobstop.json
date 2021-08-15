@@ -1,0 +1,73 @@
+{
+ "prereq": "entrance",
+ "layout": [
+  [0,0,0,0,0,0,0,0],
+  [0,1,1,1,1,1,1,0],
+  [0,1,0,0,0,0,1,0],
+  [0,1,1,1,1,0,1,0],
+  [0,0,0,0,1,2,1,0],
+  [0,1,1,1,1,0,1,0],
+  [3,1,0,0,0,0,1,0],
+  [0,1,1,1,1,0,1,0],
+  [0,0,0,0,1,4,1,0],
+  [0,1,1,1,1,0,1,0],
+  [5,1,0,0,0,0,1,0],
+  [0,1,1,1,1,1,1,0],
+  [0,0,0,0,0,0,0,0]
+ ],
+ "blocks": [
+  {
+   "name": "wall",
+   "all": "brick-red",
+   "all_solid": true
+  },
+  {
+   "name": "floor",
+   "top": "tiles-blue",
+   "bottom": "center-square"
+  },
+  {
+   "name": "T",
+   "east": "brick-red",
+   "west": "ts3d-T",
+   "all_solid": true
+  },
+  {
+   "name": "S",
+   "east": "ts3d-S",
+   "all_solid": true
+  },
+  {
+   "name": "3",
+   "east": "brick-red",
+   "west": "ts3d-3",
+   "all_solid": true
+  },
+  {
+   "name": "D",
+   "east": "ts3d-D",
+   "all_solid": true
+  }
+ ],
+ "player": {
+  "pos": [1.5, 1.5],
+  "kind": "player"
+ },
+ "ents": [
+  {
+   "kind": "goblin",
+   "team": "enemy",
+   "pos": [4.5, 3.5]
+  },
+  {
+   "kind": "goblin",
+   "team": "enemy",
+   "pos": [4.5, 7.5]
+  },
+  {
+   "kind": "goblin",
+   "team": "enemy",
+   "pos": [6.5, 7.5]
+  }
+ ]
+}
