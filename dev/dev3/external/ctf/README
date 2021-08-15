@@ -1,0 +1,97 @@
+         ________________________________________
+        /                                       /
+       / .----.    ____________    __________  /
+      / /     /   /     /     /   /         / /
+     / /               /         /           /
+    / /               /         /-----/     /
+   / /               /         /           /
+  / /     /         /         /           /
+ / *_____*        _/_       _/_          /
+/______________________________________ /
+
+C Test Functions aims to provide an easy and simple way of testing C projects.
+The unit tests are included directly in the files next to the tested behavior.
+The tests are run by the `ceeteef` program on the compiled executable. Other
+than the tests themselves, you need not write anything new.
+
+NAMING
+======
+
+I called the command `ceeteef` rather than `ctf` because `ctf` seemed like a
+short name for a non-essential command.
+
+SYSTEM REQUIREMENTS
+===================
+
+This is meant for POSIX systems, specifically POSIX.1-2001. This includes, at
+least for now, the `nm` command.
+
+I think it would be possible to port it to Windows (without using a Unix
+emulator,) but I have not the knowledge, the motivation, nor the computer.
+
+USAGE
+=====
+
+Running `make` creates the executable.
+
+Install the command with `make install` or by manually copying the manual pages,
+the header, and the executable into your preferred directories.
+
+To write a test, include the `libctf.h` header in the `lib` directory. Now write
+a test:
+
+CTF_TEST(test_name,
+	printf("testing...");
+	assert(1 + 1 == 3);
+)
+
+This will only exist when the symbol CTF_TESTS_ENABLED is defined. If so, a
+static function with the name `test_name` is created, so you can't reuse the
+name. The executable `ceeteef` depends on test symbols in your program existing
+in the compiled version, so make sure symbols are exported by default in
+whatever way possible. This may require adding the `-shared` option, i.e.,
+making a shared library.
+
+Now run the tests:
+
+ $ ceeteef YOUR-EXECUTABLE
+-- test_name --
+test_name:testing...
+test_name:Assertion failed: (1 + 1 == 3), function test_name, file test.c, line 3.
+test_name FAILED   Terminated by signal 6   Core dumped
+
+For further information, consult the man pages `ceeteef.1` and `ctf.3` or the
+help information from `ceeteef -h`. A practical example of this framework's
+usage can be seen with my project 'ts3d', located at github.com/TurkeyMcMac/ts3d
+
+OUTPUT PARSING
+==============
+
+I didn't add a whole lot of built-in output switches because I figure that's the
+Unix way or something. The output is fairly easy to parse.
+
+All of the following scripts, except the last one, can have styles enabled with
+`ceeteef`'s -s option. Replace TESTS in these examples with the name of your
+compiled test file.
+
+Listing all output of just the failing tests:
+
+ $ ceeteef TESTS | awk '/^-/{o=""}{o=o$0"\n"}/^[^- ]+ [^ ]*FAIL/{printf"%s",o}'
+
+Listing only test outcomes:
+
+ $ ceeteef TESTS | grep -Ev '^--|^[[:alnum:]_]+:'
+
+Listing only test failure outcomes:
+
+ $ ceeteef TESTS | grep -Ev '^--|^[[:alnum:]_]+:|SUCCEEDED'
+
+Finally, here is a more complex script. It writes the output from each test into
+its own file in the directory 'logs'. The file is named after the test function.
+Here it is, in all its hideousness:
+
+ceeteef TESTS | sed '
+	s/'\''/'"'\\\\''"'/g
+	s/^\([^-: ]\{1,\}\)[: ]\(.*\)$/printf %s\\\\n '\''\2'\'' >> logs\/\1/
+	s/^-- \([^ ]\{1,\}\) --$/rm -f logs\/\1/
+' | sh
