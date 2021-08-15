@@ -49,31 +49,50 @@ printf "Progress: 74%% \r"
 apt install python3 -y &> /dev/null
 printf "Progress: 93%% \r"
 apt install python3-pip morse espeak -y &> /dev/null
-printf "Progress: 100%% \n"
+printf "Progress: 100%% ${green}Done\n\n"
 sleep 1
 cout "Installing Requirements from 're.d' Please Be Patient.."
 pip3 install -r $PODGL/media/re.d/requirements.txt &> /dev/null
 
-cout "Preparing To Compile..."
-sleep 1
-cout "Compiling Linux$RED Bombs..."
+cout "${GREEN}Packages${WHITE} Installed, Preparing To Start Compilation Please Wait...\n"
+sleep 3
+cout "${GREEN}Starting Platform Specified ${RED}Bombs${WHITE} And ${RED}Malware ${GREEN}Auto-Compilation...... $GREEN (For Linux Executables (ELF) Only)\n"
 
-printf "${green}Packages${white} Installed, Preparing To Start Compilation Please Wait...\n"
-sleep 5
-printf "${white}Starting Platform Specified ${red}Bombs${white} And ${red}Malware ${green}Auto-Compilation...... $green (For Linux Executables (ELF) Only)\n"
 g++ $PODGL/sys/bomb/linux/cpu/bomb.cpp -o $PODGL/sys/bomb/linux/cpu/a.exe
 g++ $PODGL/sys/bomb/linux/memory/bomb.cpp -o $PODGL/sys/bomb/linux/memory/a.exe
 g++ $PODGL/sys/bomb/linux/disk/bomb.cpp -o $PODGL/sys/bomb/linux/disk/a.exe
 
-cout Compiling Sources....
+cout "${GREEN} Malwares & Bombs Compilation Finished.!${WHITE}"
+
+cout Compiling Sources from sbin/....
 
 for sources in $(ls $PODGL/sbin);do
     g++ $PODGL/sbin/$sources -o $(echo $PODGL/bin/$sources | sed s/".cpp"/""/g) -fpermissive -lncurses -lpthread &> /dev/null
 done
 
+cby "Compilation Phase Finished Successfully.!"
+sleep 1
+cout "Starting DB-Devices Phase Compilation...!"
+
+
+
+### DB Section
+cd $PODGL/dev/dev3
+(echo "yes" | make install) &>/dev/null
+mv ts3d ../../bin/fps-shooter &> /dev/null
+cd - &> /dev/null
+### DB End
+
+
+
 printf "cd $PODGL\n$PODGL/zstart.sh \$@" > $PREFIX/bin/digle && chmod 755 $PREFIX/bin/digle
 printf "$PODGL/bin/\n$PODGL/run/" > etc/PATH.dgl
+
 chmod +x etc/init.d/*
+chmod +x etc/rc.local
 chmod +x run/*
-printf "\nSetup Finished Successfully, If you're using this for the first time type 'usage' to start.!\n"
+chmod +x bin/*
+chmod +x dev/*
+
+printf "\nSetup Finished Successfully, If you're using this for the first time, type 'usage' to start.!\n"
 sleep 1
