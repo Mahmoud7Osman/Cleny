@@ -79,3 +79,19 @@ say(){
   timeout 5 morse -f 400 n
   killall -9 morse &> /dev/null
 }
+
+print(){
+  printf "$white[$blue+$white] %s\n" "$*"
+}
+error(){
+  printf "$white[$red-$white] %s\n" "$*"
+}
+notify(){
+  printf "$white[$green*$white] %s\n" "$*"
+}
+warn(){
+  printf "$white[$red!$white] %s\n" "$*"
+}
+inf(){
+  printf "$white[${yellow}i$white] %s\n" "$*"
+}
