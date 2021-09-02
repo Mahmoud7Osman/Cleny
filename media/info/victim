@@ -1,23 +1,27 @@
-- info 
-     =-= Command Victim is used to set your target ip and port.
-     =-= See info auto if you want to automaticly set target information without using victim command
+- info:
+     Command Victim is used to set your target ip and port.
+     See info auto if you want to automaticly set target information without using 'victim' command.
      
      Required Arguments: 2
-     First Arguments can be: ip, port.
-     Second Argument depend on the first one: (exapmle if argument 1 is 'ip', argument 2 is an ip address, and so on)
 
-- usage
-     
-     victim <arg> <arg>
+- usage:
+               IP or Port   IP Address Or Port Number
+               __________   __________
+     victim      <arg>        <arg>
+                 _____        _____
+                   1            2
+
+
      victim ip <ip address of victim>
      victim port <port of victim>
 
-- Examples
-     victim ip 127.0.0.1 
-     victim port 4444
+- Examples:
+
+1-)   victim ip 127.0.0.1 
+      victim port 4444
      
-     victim ip localhost
-     victim ip kali.lan
+2-)   victim ip localhost
+      victim ip kali.lan
      
-     victim ip google.com
-     victim port 80
+3-)   victim ip google.com
+      victim port 80
