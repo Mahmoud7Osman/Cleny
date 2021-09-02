@@ -79,7 +79,7 @@ cout "Note: Usage: prompt (1, 2, 3, 4, 5 or 6)"
 }
 
 if [ "$1" == '' ]; then
-   printf "${green}show ${yellow}options\n${green}show ${yellow}values\n${green}show ${yellow}logs\n${green}show ${yellow}malwares\n${green}show$yellow commands\n${green}show$yellow prompts\n${green}show$yellow bombs\n${green}show$yellow registers\n${green}show$yellow X_Y\n"
+   printf "${green}show ${yellow}options\n${green}show ${yellow}values\n${green}show ${yellow}logs\n${green}show ${yellow}malwares\n${green}show$yellow commands\n${green}show$yellow prompts\n${green}show$yellow bombs\n${green}show$yellow registers\n${green}show ${yellow}windows\n${green}show$yellow linux\n${green}show ${yellow}cursor${green}\nshow$yellow X_Y\n"
    exit 1
 fi
 registers(){
@@ -142,5 +142,8 @@ linux(){
   fi
 
   $PODGL/media/show/linux/$1/show
+}
+cursor(){
+ printf "\e[?25h"
 }
 $1 $2
