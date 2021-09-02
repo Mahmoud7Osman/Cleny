@@ -10,6 +10,7 @@ source $PODGL/lib/fsh.cfg.sh
 source $PODGL/lib/colors2
 
 if [ "$1" != '' ];then
+    cd $CCWD
     chmod +x $1
     PATH=$PATH:$PODGL/bin:$PODGL/run
     . ./$1
@@ -24,8 +25,6 @@ cat etc/motd
 # History
 HISTFILE=$PODGL/var/digle_history
 #set -o history
-
-
 
 #cd - &> /dev/null
 #
@@ -84,6 +83,7 @@ while [ 1 ]; do
 	 type $(echo $cmd | head -n1 | awk '{print $1;}') &> /dev/null
          if [ "$?" != 0 ];then
               cerr "$cmd: Command Not Found"
+              history -s $cmd
          else
               $cmd
               history -s $cmd
