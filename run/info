@@ -1,0 +1,5 @@
+source $PODGL/lib/fsh.cfg.sh
+if [ "$1" == '' ];then cerr "${RED}Usage: ${WHITE} info <command>"; exit 1;fi
+if [ ! -f "$PODGL/media/info/$1"  ];then cerr "${RED}Error: ${WHITE} Command $1 Info File (${CYAN}$PODGL/media/info/${RED}$1${CYAN}${WHITE}) Does'nt Exist";exit 1;fi
+printf "$BWhite"
+cat $PODGL/media/info/$1
