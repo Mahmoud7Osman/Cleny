@@ -1,5 +1,5 @@
 <h1> Digital Eagle (Digle) </h1>
-Digle, Or Digital Eagle, A Massive Command Line Based Environment Aiming at Low-Level Stuffs, Supporting and helping Penetration Testers, Binary Analysts, Reverse Engineers, Or Even Low-Level Programmers to do their work without googling, or using online tools.
+Digle, Or Digital Eagle, A Massive Command Line Based Environment Aiming at Low-Level Stuffs, Supporting and helping Penetration Testers, Binary Analysts, Reverse Engineers, Or Even Low-Level Programmers to do their work faster
 
 First, Digle Is Programmed in a way to help each tool to Exchange, Manipulate, Fix, Delete Data in the Digle Environment, Providing Many Automations without User Interaction
 
