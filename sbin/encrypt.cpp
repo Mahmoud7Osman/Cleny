@@ -12,7 +12,7 @@ int trg;
 
 int main(int argc, char** argv){
    if (argc<2){
-     fatal("No Enough Arguments, execute 'help encrypt' command");
+     fatal("No Enough Arguments, execute 'info encrypt' command");
      return -1;
    }
 
