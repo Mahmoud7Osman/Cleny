@@ -10,20 +10,3 @@ First, Digle Is Programmed in a way to help each tool to Exchange, Manipulate, F
 <h4>- Digle Provide Scripting Engine, Enabling Shell Programmers to move cursor from one location to another one easilly, and much more </h4>
 <h4>- Digle's Malwares are intelligent, they hide themselves, they detect Virtual Machines or Virtual Environment, They can inject themselves in a Running Process</h4>
 <h4>- Digle Can inject Files with Each Others, Helping User to inject a pre-spawned malware in a specified file or script.</h4>
-<h2> "ACIC", All Commands In One Commands, The Digle INTELLIGENT Helping </h2>
-<img src=media/sct/5.png>
-<h2> "ELM", Environment Like Movies, Enjoy Digle Intelligent Environment Mixed with Excellent tools</h2>
-<img src=media/sct/3.png>
-<h2> Control Phones With Digle: </h2>
-
-<img src=media/sct/1.png>
-
-<h2> Analyze, Debug, Disassemble, Reverse Binaries With Digle, (GDB, Objdump, ncurses-hexeditor, Digle-Klab in 4 Xterms)</h2>
-<img src=media/sct/2.png>
-<h2>Contain Information Drawing Required for every Binary Exploitation Work Or Embedeed Systems Programmers</h2> 
-<img src=media/sct/6.png>
-<h2>See Weather Info From Your Terminal</h2>
-<img src=media/sct/7.png>
-<h2>Bombing, Getting Fun with Crashing Systems with Digle Bombs</h2>
-<img src=media/sct/Screenshot_2021-08-04_22_25_19.png>
-Digle is an Ocean, It will Help You a lot, in Low-Level Stuff, like if you're now trying to exploit a buffer overflow But it's Hard, This Tool Will Be Your Weapon..!
