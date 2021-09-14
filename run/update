@@ -28,7 +28,7 @@ echo
 
 source $PODGL/lib/fsh.cfg.sh
 
-printf $white"[+] Welcome $red`whoami`$white To The Digle Installer at (`date`)\n"
+printf $green"[+]$yellow Welcome $red`whoami`$yellow To The Digle Installer at (`date`)\n"
 sleep 1
 printf "$green[*]$yellow Installing Required Packages... It May take a lot of time $green(10 Min Maximum)$white\n"
 
@@ -62,7 +62,7 @@ g++ $PODGL/sys/bomb/linux/cpu/bomb.cpp -o $PODGL/sys/bomb/linux/cpu/a.exe
 g++ $PODGL/sys/bomb/linux/memory/bomb.cpp -o $PODGL/sys/bomb/linux/memory/a.exe
 g++ $PODGL/sys/bomb/linux/disk/bomb.cpp -o $PODGL/sys/bomb/linux/disk/a.exe
 
-cout "${GREEN} Malwares & Bombs Compilation Finished.!${WHITE}"
+cout "${GREEN}Malwares & Bombs Compilation Finished.!${WHITE}"
 
 cout Compiling Sources from sbin/....
 
