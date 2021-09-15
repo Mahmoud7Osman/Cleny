@@ -1,1 +1,0 @@
-if [ "$1" == '' ]; then exit 1; else cat $1 | sed s/==/9/g  |sed s/!=/9/g |sed s/'=>'/9/g |sed s/'=<'/9/g | grep = --color; fi
