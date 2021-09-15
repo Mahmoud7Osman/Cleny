@@ -22,3 +22,6 @@ export ARCH=""
 export SYSTEM=""
 export TARGET="           "
 
+# User Info
+
+ONLINE_ID=$(cat $PODGL/etc/iChat/name.i)
