@@ -1,6 +1,8 @@
 #define P_GREEN  5
 #define P_RED    6
 
+#define C_EXIT   0x65
+
 #define I_CREATE 0x63
 #define I_JOIN   0x6a
 #define I_TEST   0x74
@@ -18,11 +20,14 @@
 #include <sys/stat.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
+#include <netdb.h>
 
+#include <signal.h>
 #include <unistd.h>
 #include <errno.h>
 
 #include "../lib/include/colors.h"
+#include "../lib/include/smf.h"
 
 using std::thread;
 
@@ -47,23 +52,23 @@ void  CreateRoomCode(void);
 
 char* StrRep(char* str,const char* src,const char* trg);
 
-unsigned long FindRoom(char* code);
-
+void FindRoom();
+void left(int sig);
 
 struct user{
-	char   ipaddr[16];
-        char   about[100];
-	char   status[10];
-	char        *name;
-        char     code[16];
+	char   address[16];
+        char       port[6];
+        char      code[22];
+	char         *name;
+        char       *ipaddr;
 };
 
 
 struct user me={.name=getenv("ONLINE_ID")};
 struct user you;
 
-struct sockaddr_in  trg={.sin_family=AF_INET, .sin_port=htons(5566)};
-struct sockaddr_in addr={.sin_family=AF_INET, .sin_port=htons(5566)};
+struct sockaddr_in  trg={.sin_family=AF_INET};
+struct sockaddr_in addr={.sin_family=AF_INET};
 
 socklen_t addrsize=sizeof(struct sockaddr_in);
 
@@ -144,7 +149,7 @@ char* GetMsg(void){
 }
 
 void iExit(){
-   printw("Press Any Key To Exit...");
+   printw("\nPress Any Key To Exit...");
    refresh();
    getch();
    endwin();
@@ -155,7 +160,7 @@ void iExit(){
 void ProcessMsg(char *msg){
    msg++;
    switch (*msg){
-     case 0x65:
+     case C_EXIT:
         free(you.name);
         free(--msg);
         iExit();
@@ -165,16 +170,39 @@ void ProcessMsg(char *msg){
 }
 
 void CreateRoomCode(){
-   for (int tmp=0; tmp<strlen(me.ipaddr); tmp++){
-      me.code[tmp]=(int)me.ipaddr[tmp]-RTD_CODE;
-   }
+   int tmp, c;
+
+   for (tmp=0; tmp<strlen(me.address); tmp++)
+      me.code[tmp]=(int)me.address[tmp]-RTD_CODE;
+
+   me.code[tmp]=0x5c;
+
+   tmp++;
+   c=tmp;
+
+   for(tmp; tmp<22; tmp++)
+      me.code[tmp]=(int)me.port[tmp-c]-RTD_CODE;
+
+   (void) memset(me.code+strlen(me.address)+1+strlen(me.port), 0x00, 0x01);
 }
 
 void FindRoom(){
-   for (int byte=0; byte<strlen(you.code); byte++)
-      you.ipaddr[byte]=*(you.code+byte)+RTD_CODE;
+   int byte;
+   char* port=you.port;
+
+   for (byte=0; you.code[byte]!=0x5c; byte++)
+      you.address[byte]=(int)*(you.code+byte)+RTD_CODE;
+   you.ipaddr=GetHostByName(you.address);
+   byte++;
+
+   for (byte; you.code[byte]!=0x00; byte++)
+       *(port++)=(int)*(you.code+byte)+RTD_CODE;
+
+   refresh();
 
    int tmp=inet_pton(AF_INET, you.ipaddr, &trg.sin_addr.s_addr);
+   trg.sin_port=htons(atoi(you.port));
+
    if (tmp==-1)return (void)printw("Error Analyzing Room Code %s\n", you.code);
    sleep(2);
 }
@@ -205,7 +233,7 @@ int main(int argc, char** argv){
 
        printw ("Enter Room Code: ");
        refresh();
-       getnstr(you.code, 15);
+       getnstr(you.code, 21);
 
        FindRoom();
        JoinRoom(0);
@@ -216,6 +244,7 @@ int main(int argc, char** argv){
    else{
        CreateRoom();
    }
+   signal(SIGPIPE, left);
    getmaxyx(stdscr, y, x );
 
    you.name=(char*)malloc(16);
@@ -271,9 +300,14 @@ int main(int argc, char** argv){
 void CreateRoom(){
     printw ("Enter Your IP Address to Start iChat On: ");
     refresh();
-    getnstr(me.ipaddr, 15);
+    getnstr(me.address, 15);
+    printw("Enter Port Number To Start iChat On (Default is 5566): ");
+    refresh();
+    getnstr(me.port, 4);
+    addr.sin_port=htons(atoi(me.port));
+
     CreateRoomCode();
-    inet_pton(AF_INET, me.ipaddr ,&addr.sin_addr.s_addr);
+    inet_pton(AF_INET, me.address ,&addr.sin_addr.s_addr);
 
     printw ("Room Code: ");
     addstr(me.code);
@@ -352,6 +386,8 @@ void SyncMsg(){
     wrefresh(iscr);
     bzero(msg, 200);
     wmove(stdscr, y-2, 4);
+    wrefresh(stdscr);
+    MessageCounter();
   }
 }
 void iTest(){
@@ -391,4 +427,11 @@ void iTest(){
          UpdateUpperScreen();
          free (test);
    }
-};
+}
+
+void left(int sig){
+   delwin(iscr);
+   endwin();
+   printf("For Unknown Reason, The Other User Left The Room\n");
+   exit(1);
+}

@@ -4,7 +4,7 @@
 int main(int argc, char**argv){
     char crusor[13]="\033[";
     if (argc!=3){
-      return printf ("Usage: move <X> <Y>\n");
+      return printf ("Usage: move <Y> <X>\n");
     }
     strncat(crusor, argv[1], 3);
     strcat(crusor, ";");
