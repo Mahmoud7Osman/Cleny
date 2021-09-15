@@ -1,0 +1,56 @@
+source $PODGL/lib/colors
+source $PODGL/lib/fsh.cfg.sh
+
+if [ "$1" != '' ];then
+  curl cheat.sh/$1
+  exit 0
+fi
+
+cout Commands:
+d="
+  $green help     : $yellow This Message 
+  $green encrypt  : $yellow Encrypt A File $green (Any File) $purple (INC 1271)
+  $green decrypt  : $yellow Decrypt A File $green (Any File) $purple (DEC 1271)
+  $green victim   : $yellow Set${red} Victim$yellow Address $green (V4) $purple (See info victim)
+  $green wifi     : $yellow Wifi Scanner & Connector $green (nmcli Based Script)
+  $green attack   : $yellow Binaries & D_Devices Automator ${red}Hacking${yellow} Script $green (see info attack) $purple (bin/:run/:dev/)
+  $green dump     : $yellow A Byte Dumper, ${cyan} (Any File) $purple (3 ARG) 
+  $green pod      : $yellow Script to Use $cyan/bin/ping$yellow as a Ping Of Death Attack
+  $green camera   : $yellow Generate ${red}Phishing${yellow} Links To open ${cyan}Webcamera ${green} (Festival Phishing)
+  $green phisher  : $yellow Generate ${red}Phishing${yellow} Links To Steal Social Media Accounts
+  $green exploit  : $yellow Manual ${cyan}Exploiting${yellow} Program ${green} (In bin/) $purple (REQUIRED ARGS: 3) $cyan (Automated By hack)
+  $green search   : $yellow Search using Google Engine $green (1 ARG)  $purple (Target)
+  $green surl     : $yellow Expand Shortened URL, Show the URL Hidden behind ${red}SHORTENED${yellow} Links
+  $green qrc      : $yellow Generate A QRcode Containing a Website Domain or URL ${purple} (1 ARG) ${cyan} (URL or DNS)
+  $green map      : $yellow Display Output as a map
+  $green prepare  : $yellow Automate Setting ${red}Digle$yellow Values in $PODGL/etc/auto.dgl $green(see nano $PODGL/etc/auto.dgl)
+  $green atx      : $yellow An ${green}ASCII${yellow} To ${green}Hex${yellow} Command line Converter
+  $green xta      : $yellow A ${green}Hex${yellow} To ${green}ASCII${yellow} Command line Converter
+  $green dtx      : $yellow A ${green}Decimal${yellow} To ${green}Hex${yellow} Command line Converter
+  $green xtd      : $yellow A ${green}Hex${yellow} To ${green}Deximal${yellow} Command line Converter
+  $green vars     : $yellow Dump Variables of ${BIGreen}High-level Programming Languages $cyan(ex: python, ruby, ....)
+  $green inject   : $yellow An Automated Tool for injecting Files, Binaries, Local Processes
+  $green shellcode: $yellow Automating$greed ObjDump$yellow To Dump Instructions From ${green}.text${yellow} segment
+  $green use      : $yellow Tell ${red}Digle${yellow} What to use, Malware or bombs
+  $green lset     : $yellow Set Options for the build command $green (For Building Files, Malwares, Bombs....)
+  $green build    : $yellow Build Something, ${red}Malware$yellow or${red} Bombs$green (see show options) $cyan(see show values)
+  $green klab     : $yellow Open Key Lab, Usefull for ${red}Binary Exploitation
+  $green isetup   : $yellow Run the ${green}iChat$yellow Setup
+  $green nops     : $yellow A Simple Tool that count all No Operation (${green}nop${yellow}) Bytes in a file ${cyan}(support x86 and x64 Only)
+  $green nulls    : $yellow A Simple Tool that count all Null Bytes in a file, or shellcode  ${cyan}(Help Shellcode Developers and learners)
+  $green show     : $yellow Show Something, see info show
+  $green prompt   : $yellow Change Command Line Prompt $blue (see show prompts)
+  $green binlab   : $yellow Open ${green}Disassembler, ${cyan}Debugger, ${blue}Editor ${yellow}in 3 xterms on a specified binary.
+  $green move     : $yellow Move Crusor to Specified ${green}X$yellow and${green} Y
+  $green press    : $yellow Wait for a specified Key Press
+  $green cout     : $yellow Print A  Success Message To Screen
+  $green cerr     : $yellow Print An ${red}Error$yellow Message To Screen 
+  $green clog     : $yellow Log A Message $green (File $PODGL/var/log/slog.dgl)
+  $green cby      : $yellow Print a Checkboxed message to screen
+  $green cbn      : $yellow Print a Uncheckboxed Message to screen
+  $green cin      : $yellow Digle Input
+  $green rlog     : $yellow Clear Logs
+  $green weather  : $yellow Get Weather Info $green (1 ARG) $purple (Location)
+  $green update   : $yellow Update ${red}Digle$yellow Framework
+"
+printf "$d"

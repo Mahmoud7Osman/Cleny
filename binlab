@@ -1,0 +1,18 @@
+source $PODGL/lib/fsh.cfg.sh
+if [ "$1" == '' ];then
+ cerr Usage: binarylab followed by executable name or path
+ exit 1
+fi 
+sleep 1
+cout Preparing Lab
+sleep 0.3
+cout Starting ...
+sleep 1
+xterm -fa Monospace -fs 9 -T "Content and Disassembly" -geometry +800 -bg blue  -e "objdump -d $1 -s -M intel | less" &
+sleep 0.5
+xterm -fa Monospace -fs 9 -T "Editor" -geometry +800+423 -bg blue  -e "hexeditor $1" &
+sleep 1
+xterm -fa Monospace -fs 9 -T "Debuger or Dynamic Disassembler" -geometry +215+423 -bg black -e "gdb $1 -q" &
+sleep 1
+xterm -fa Monospace -fs 9 -T "KLab" -geometry +215-423 -bg blue -e "$PODGL/bin/klab" &
+cby OK..!

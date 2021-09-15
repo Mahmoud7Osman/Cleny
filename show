@@ -1,0 +1,149 @@
+source $PODGL/lib/fsh.cfg.sh
+values(){
+op="${green}Using:                 ${white}:${yellow} $WHAT
+
+ ${red}Malware Section:
+ -----------------
+   ${green}Malware             ${white}:${yellow} $MALWARE
+   ${green}Malware Type        ${white}:${yellow} $TYPE
+   ${green}Victim IP Address   ${white}:${yellow} $VICTIM (Used also in listening)
+   ${green}Victim PORT         ${white}:${yellow} $PORT   (Used Also in listening)
+   ${green}Victim Platform     ${white}:${yellow} $PLATFORM
+   ${green}Victim ARCHITECTURE ${white}:${yellow} $ARCH
+
+ ${red}Shell Section:
+ -----------------
+   ${green}Digle Location      ${white}:${yellow} $PODGL
+ 
+ ${red}Bomb Section:
+ -----------------
+   ${green}Victim System       ${white}:${yellow} $SYSTEM
+   ${green}Hardware Target     ${white}:${yellow} $TARGET
+" 
+printf "$op"
+}
+
+logs(){
+if [ -f "var/log/slog.bgl" ];then
+ cout "Opening Log Data Holder... (src = var/log/slog.bgl)"
+ cat $PODGL/var/log/slog.bgl
+else cerr "Logs Holder Dosn't Exists"
+fi
+}
+malwares(){
+d="$cyan Avalaible Malwares :
+
+   $green Droppers   $cyan: Linux - Windows - Termux - Android
+   $green Executables$cyan: Linux - Windows - Termux - Android $red(For Android is a package)
+   $green KeyLogger  $cyan: Linux - Windows
+
+"
+printf "$d"
+}
+
+
+options(){
+printf "${white}Those Values (Colored ${green}green${white}) Can Be Changed By using the '${green}lset${white}' Command\n"
+printf "${green}Option			         ${yellow}Value			${cyan}   Description\n"
+printf "%s\n" "-------                          ------                    ------------"
+ d="
+${green}VICTIM                          $cyan$VICTIM\t\t${white}   Victim Ip Address, Required for all malwares
+${green}PORT                            $cyan$PORT\t\t\t${white}   Victim Port, Required for all malwares
+${green}MALWARE                         $cyan$MALWARE\t\t${white}   Malware Type, Required for building malwares
+${green}PLATFORM                        $cyan$PLATFORM\t\t\t${white}   Victim Platform, Or System, required for building malware
+${green}TYPE                            $cyan$TYPE\t\t${white}   Malware Actions, Reverse shell, or bind and so on 
+${green}ARCH                            $cyan$ARCH\t\t\t${white}   Victim Architecture, Required for Cross Compiling, or Malware convertions
+
+${green}SYSTEM                          $cyan$SYSTEM\t\t\t${white}   Victim Operating System, required for building Bombs
+${green}TARGET                          $cyan$TARGET\t\t${white}   Victim Hardware Target, Required for What Hardware Will be Attacked
+"
+printf "$d"
+}
+
+commands(){
+cout "Digle Framework Commands:" && printf "\033[1;97m\n"
+ls $PODGL/run --color=no
+ls $PODGL/bin --color=no
+}
+
+prompts(){
+d="${white}0: $yellow Default $white
+1: $yellow Gamers $white
+2: $yellow Classic $white
+3: $yellow Commedy $white
+4: $yellow Long Prompt $white
+5: $yellow Simple $white
+6: $yellow No Prompt\n"
+printf "$d"
+cout "Note: Usage: prompt (1, 2, 3, 4, 5 or 6)"
+}
+
+if [ "$1" == '' ]; then
+   printf "${green}show ${yellow}options\n${green}show ${yellow}values\n${green}show ${yellow}logs\n${green}show ${yellow}malwares\n${green}show$yellow commands\n${green}show$yellow prompts\n${green}show$yellow bombs\n${green}show$yellow registers\n${green}show ${yellow}windows\n${green}show$yellow linux\n${green}show ${yellow}cursor${green}\nshow$yellow X_Y\n"
+   exit 1
+fi
+registers(){
+d="
+64-bit Register    32-bit Register        16-bit Register     8-bit Register
+----------------|-------------------|---------------------|--------------------
+rax             |   eax	            |     ax	          |    al
+                |		    |			  |
+rbx		|   ebx	            |     bx		  |    bl
+		|		    |			  |
+rcx		|   ecx	            |	  cx	          |    cl
+		|		    |			  |
+rdx		|   edx	            |	  dx	          |    dl
+		|		    |			  |
+rsi		|   esi	            |	  si	          |    sil
+		|		    |                     |
+rdi		|   edi	            |	  di	          |    dil
+		|		    |			  |
+rdp		|   ebp	            |	  bp	          |    bpl
+		|	            |                     |
+rsp		|   esp	            |	  sp	          |    spl
+		|                   |                     |
+r8		|   r8d	            |	  r8w	          |    r8b
+		|                   |                     |
+r9		|   r9d		    |     r9w	          |    r9b
+		|                   |                     |
+r10		|   r10d	    |	  r10w	          |    r10b
+		|                   |                     |
+r11		|   r11d	    |	  r11w	          |    r11b
+		|                   |                     |
+r12		|   r12d	    |     r12w	          |    r12b
+		|                   |                     |
+r13		|   r13d	    |	  r13w	          |    r13b
+		|                   |                     |
+r14		|   r14d	    |	  r14w	          |    r14b
+		|                   |                     |
+r15		|   r15d	    |     r15w	          |    r15b
+
+"
+printf "$d"
+}
+
+X_Y(){
+  $PODGL/bin/xy
+}
+
+windows(){
+  if [ "$1" == '' ] || [ ! -f "$PODGL/media/show/windows/$1/show" ];then
+    printf "${green}show$yellow windows bombs\n${green}show$yellow windows malwares\n"
+    exit 1
+  fi
+  
+  $PODGL/media/show/windows/$1/show
+}
+
+linux(){
+  if [ "$1" == '' ] || [ ! -f "$PODGL/media/show/linux/$1/show" ];then
+    printf "${green}show$yellow linux bombs\n${green}show$yellow linux malwares\n"
+    exit 1
+  fi
+
+  $PODGL/media/show/linux/$1/show
+}
+cursor(){
+ printf "\e[?25h"
+}
+$1 $2
