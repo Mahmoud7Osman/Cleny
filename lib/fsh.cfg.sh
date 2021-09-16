@@ -47,7 +47,9 @@ prepare(){
    cout "Preparing Automated Values from $PODGL/etc/auto.dgl"
    source $PODGL/etc/auto.dgl
 }
-
+dir(){
+  $PREFIX/bin/dir $1 --color
+}
 lset(){
  if [ "$1" == '' ] || [ "$2" == '' ];then
     cerr No Enough Arguments, see info lset
@@ -74,24 +76,25 @@ source $PODGL/etc/clins/$1
 fi
 }
 say(){
-  timeout 5 morse -f 400 a
   espeak -v en-us "\"$@\""
-  timeout 5 morse -f 400 n
-  killall -9 morse &> /dev/null
 }
 
-print(){
-  printf "$white[$blue+$white] %s\n" "$*"
+succeed(){
+  printf "$white[$BBlue+$white] %s\n" "$*"
 }
-error(){
-  printf "$white[$red-$white] %s\n" "$*"
+failed(){
+  printf "$white[$BRed-$white] %s\n" "$*"
 }
 notify(){
-  printf "$white[$green*$white] %s\n" "$*"
+  printf "$white[$BGreen*$white] %s\n" "$*"
 }
 warn(){
-  printf "$white[$red!$white] %s\n" "$*"
+  printf "$white[$BRed!$white] %s\n" "$*"
 }
-inf(){
-  printf "$white[${yellow}i$white] %s\n" "$*"
+inform(){
+  printf "$white[${BYellow}i$white] %s\n" "$*"
+}
+
+unknown(){
+  printf "$white[${BPurple}?$white] %s\n" "$*"
 }

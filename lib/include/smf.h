@@ -13,3 +13,14 @@ char* str_rep(const char *str, const char *src, const char *trg){
     }
     return newstr;
 }
+
+char* GetHostByName(const char* dns){
+   struct hostent* host=gethostbyname(dns);
+   char *ipaddr=(char*)malloc(16);
+
+   if (host==0x00)return 0x00;
+
+   inet_ntop(AF_INET, host->h_addr, ipaddr, 16);
+
+   return ipaddr;
+}
