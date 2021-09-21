@@ -13,5 +13,5 @@ Digle Adds A REALLY BIG Scripting Power to linux shell, Example: Creating Window
 <li> Digle Provide Scripting Engine, Enabling Shell Programmers to move cursor from one location to another one easilly, and much more </li>
 <li> Digle's Malwares are intelligent (Super Malwares Only), they hide themselves, they detect Virtual Machines or Virtual Environment, They can inject themselves in a Running Process</li>
 <li> Digle Can inject Files with Each Others, Helping User to inject a pre-spawned malware in a specified file or script.</li>
-<li> Digle Provide an Exellent Terminal-Based Chatting App.</li>
+<li> Digle Provide an Exellent Terminal-Based Chatting App (2 Members Only For Every Chatting Room).</li>
 </ul>
