@@ -9,7 +9,7 @@ First, Digle Is Programmed in a way to help each tool to Exchange, Manipulate, F
   <li> Digle Can Spawn Malwares, With a user-specified type, Like saying to digle to spawn a windows executable that log keystrokes, Or Open a Reverse Shell, Or saying to spawn a Dropper that Inject some System Files, and much more with Different File Types</h4>
   </li>
   <li> Digle Provide Phishing Tools, Phishing Web Camera, Or Social Media's Accounts</li>
-  <li> Digle Provide Scripting Engine, Enabling Shell Programmers to move cursor from one location to another one easilly, and much more, By Increasing Shell Scripting Power To The Maximum</li>
+  <li> Digle Provide Scripting Engine, Enabling Shell Programmers to create windows in terminal, move cursor from one location to another one easilly, and much more, By Increasing Shell Scripting Power To The Maximum</li>
   <li> Digle Malwares, From Basic Reverse Shells into Super Interactive Remote Controlled Malware, Named Digle Super Malware Or DSM</li>
   <li> Digle's Super Malwares are intelligent, they hide Themselves, They Detect Virtual Machines Or Debugging, They can inject themselves in a Running Process, They can Destroy Device if user tried to delete The Malware.</li>
   <li> Digle Can inject Files with Each Others, Helping User to inject a pre-spawned malware in a specified file or script, Injection Supports Many Extensions</li>
