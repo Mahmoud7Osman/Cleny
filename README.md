@@ -1,4 +1,4 @@
-<h1> Digital Eagle (Digle) </h1> (Note: This Project isn't Finished Yet, it's Under Development, Some Things will not work)
+<h1> Digital Eagle (Digle) </h1> (Note: This Project isn't Finished Yet, it's Under Development, Some Tools will not work)
 <h6> Hell0 W0rld </h6>
 Digle, Or Digital Eagle, A Massive Command Line Based Environment Aiming at Hacking Stuffs, Supporting and helping Penetration Testers, Binary Analysts, Reverse Engineers, Or Even Low-Level Programmers to do their work faster
 
