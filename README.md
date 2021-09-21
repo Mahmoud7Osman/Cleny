@@ -4,7 +4,7 @@ Digle, Or Digital Eagle, A Massive Command Line Based Environment Aiming at Hack
 
 First, Digle Is Programmed in a way to help each tool to Exchange, Manipulate, Fix, Delete Data in the Environment, Providing Many Automations without User Interaction.
 
-<h2>Digle Tool Power</h2>
+<h2>Digle's Tool Power</h2>
 <ul>
   <li> Digle Can Spawn Malwares, With a user-specified type, Like saying to digle to spawn a windows executable that log keystrokes, Or Open a Reverse Shell, Or saying to spawn a Dropper that Inject some System Files, and much more with Different File Types</h4>
   </li>
