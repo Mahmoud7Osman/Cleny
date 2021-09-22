@@ -31,4 +31,4 @@ Digle, Or Digital Eagle, A Massive Command Line Based Environment Aimed At Hacki
   <li> More Scripting Power</li>
   <li> Advanced Fileless Malwares</li>
   <li> Some Wireless Tools For Wireless Networks</li>
-</ol>
+</ol> 
