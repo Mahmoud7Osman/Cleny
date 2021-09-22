@@ -9,8 +9,9 @@
 
 Note: I Am a Beginner.
 Note: Malwares Aren't Finished Yet.
+Note: My Telegram For Questions And Help: @DigitalEagle_0
 
-Digle, Or Digital Eagle, A Massive Command Line Based Environment Aiming At Hacking Stuffs, (Probably This Tool is For Post Exploitation Right Now.)
+Digle, Or Digital Eagle, A Massive Command Line Based Environment Aimed At Hacking, (Probably This Tool is For Post Exploitation Right Now.)
 
 
 <h2>Digle's Tool Power</h2>
