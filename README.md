@@ -1,6 +1,11 @@
 <h1> Digital Eagle (Digle) </h1> (Note: This Project isn't Finished Yet, it's Under Development, Some Tools will not work)
 <h6> Hell0 W0rld </h6>
 <h3> Thanks To LiveOverFlow Channels (Liveoverflow & liveunderflow) For Helping Me To Develop My Skills And my Vision, And For Inspiring Me To Create This Repository</h3>
+<ul>
+  <li>LiveOVerFlow  Youtube Channel: https://www.youtube.com/c/LiveOverflow</li>
+  <li>LiveUnderFlow Youtube Channel: https://www.youtube.com/c/LiveUnderflow</li>
+  <li>LiveOverFlow Twitter:          https://twitter.com/LiveOverflow </li>
+</ul>
 Digle, Or Digital Eagle, A Massive Command Line Based Environment Aiming at Hacking Stuffs, Supporting and helping Penetration Testers, Binary Analysts, Reverse Engineers, Or Even Low-Level Programmers to do their work faster
 
 First, Digle Is Programmed in a way to help each tool to Exchange, Manipulate, Fix, Delete Data in the Environment, Providing Many Automations without User Interaction.
