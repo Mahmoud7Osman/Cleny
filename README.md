@@ -26,10 +26,9 @@ Digle, Or Digital Eagle, A Massive Command Line Based Environment Aimed At Hacki
 </ul>
 <h2>Future's Updates if People Liked Digle</h2>
 <ol>
-  <li> Binary File Code Injection</li> 
-  <li> A GUI Based Automated Environment For Digle Shell</li>
+  <li> Binary File Code Injection (Especially For ELF)</li>
+  <li> A GUI Based Automated Environment For Digle Shell (Qt)</li>
   <li> More Scripting Power</li>
   <li> Advanced Fileless Malwares</li>
   <li> Some Wireless Tools For Wireless Networks</li>
-  <li> Binary Exploitation Advanced Automated Tools </li>
 </ol>
