@@ -42,7 +42,7 @@ Digle, Or Digital Eagle, A Massive Command Line Based Environment Aimed At Hacki
 <h2>Usage: </h2>
 
 <ol>
-  <li>Firstly Execute bash zstart.sh and wait the installation</li>
+  <li>Execute bash zstart.sh and wait the installation</li>
   <li>Execute help to show all commands with their short description</li> 
   <li>Execute info followed by a command name to learn its usage</li>
   <li>Enjoy Hacking</li>
