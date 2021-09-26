@@ -1,5 +1,4 @@
-<p><abbr title="President of The United States">POTUS</abbr> rode his bicycle into a tree.</p>
-
+<meter min="0" max="100" low="59" high="90" optimum="90" value="50">50%</meter>
 <h1> Digital Eagle (Digle) </h1> (Note: This Project isn't Finished Yet, it's Under Development, Some Tools will not work)
 <h6> Hell0 W0rld </h6>
 <h3>Easy To Use, PowerFul, Colorful Hacking Environment, </h3>
