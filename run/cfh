@@ -1,0 +1,1 @@
+find . | nl | tail -1 | sed s/'\.'/'\n'/g | sed s/' '/'\n'/g | grep -E '[0-9]+'

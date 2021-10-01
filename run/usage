@@ -1,0 +1,13 @@
+source $PODGL/lib/fsh.cfg.sh
+
+sleep 2
+cout "Digle Or Digital Eagle, A Massive Command Line Based Environment, Aimed At Hacking Stuff, Especially On Remote Access"
+printf "\n"
+cout "The '${GREEN}show${WHITE}'  Command, For Printing ${GREEN}Showable${WHITE} Values. Execute 'show' Without Arguments. or ${GREEN}info show${WHITE}"
+cout "The '${GREEN}lset${WHITE}'  Command, For Setting Some Environment Variables And Values, Execute ${GREEN}info lset${WHITE}"
+cout "The '${GREEN}build${WHITE}' Command, For Building A ${RED}Malware${WHITE} Or A ${RED}Bomb${WHITE}, see ${GREEN}info build${WHITE}"
+printf "\n"
+cout "Those Are Some Basic Commands, Execute '${GREEN}help${WHITE}' For More Commands."
+cout "Execute '${GREEN}info${WHITE}' Followed By A Command To Learn it"
+cout "If You Want To use the Scripting Power, execute '${GREEN}show commands${WHITE}' to show all Digle Commands, All Digle Commands Can Be Used in Scripting"
+cout "Scripting Syntax is a bash Syntax (Because Scripting is based on bash with some functions and Digle Binaries & Scripts)"

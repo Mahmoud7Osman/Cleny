@@ -1,13 +1,1 @@
-source $PODGL/lib/colors
-source $PODGL/lib/fsh.cfg.sh
-
-ls(){
-   tree -C
-}
-
-world(){
-  telnet mapscii.me
-}
-
-
-$1
+telnet mapscii.me

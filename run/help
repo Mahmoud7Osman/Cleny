@@ -9,6 +9,7 @@ fi
 cout Commands:
 d="
   $green help     : $yellow This Message 
+  $green info     : $yellow Command Teacher, Execute info followed by a command name $purple (1 Argument)
   $green encrypt  : $yellow Encrypt A File $green (Any File) $purple (INC 1271)
   $green decrypt  : $yellow Decrypt A File $green (Any File) $purple (DEC 1271)
   $green victim   : $yellow Set${red} Victim$yellow Address $green (V4) $purple (See info victim)
@@ -18,12 +19,12 @@ d="
   $green pod      : $yellow Script to Use $cyan/bin/ping$yellow as a Ping Of Death Attack
   $green camera   : $yellow Generate ${red}Phishing${yellow} Links To open ${cyan}Webcamera ${green} (Festival Phishing)
   $green phisher  : $yellow Generate ${red}Phishing${yellow} Links To Steal Social Media Accounts
-  $green exploit  : $yellow Manual ${cyan}Exploiting${yellow} Program ${green} (In bin/) $purple (REQUIRED ARGS: 3) $cyan (Automated By hack)
+  $green exploit  : $yellow Manual ${cyan}Exploiting${yellow} Program ${green} (In bin/) $purple (REQUIRED ARGS: 3) $cyan (Automated By attack)
   $green search   : $yellow Search using Google Engine $green (1 ARG)  $purple (Target)
   $green surl     : $yellow Expand Shortened URL, Show the URL Hidden behind ${red}SHORTENED${yellow} Links
   $green qrc      : $yellow Generate A QRcode Containing a Website Domain or URL ${purple} (1 ARG) ${cyan} (URL or DNS)
-  $green map      : $yellow Display Output as a map
-  $green prepare  : $yellow Automate Setting ${red}Digle$yellow Values in $PODGL/etc/auto.dgl $green(see nano $PODGL/etc/auto.dgl)
+  $green map      : $yellow World Map ${cyan}(by mapscii)
+  $green prepare  : $yellow Automate Setting ${red}Digle$yellow Options, Options are in $PODGL/etc/auto.dgl $green(see nano $PODGL/etc/auto.dgl)
   $green atx      : $yellow An ${green}ASCII${yellow} To ${green}Hex${yellow} Command line Converter
   $green xta      : $yellow A ${green}Hex${yellow} To ${green}ASCII${yellow} Command line Converter
   $green dtx      : $yellow A ${green}Decimal${yellow} To ${green}Hex${yellow} Command line Converter
@@ -41,7 +42,7 @@ d="
   $green show     : $yellow Show Something, see info show
   $green prompt   : $yellow Change Command Line Prompt $blue (see show prompts)
   $green binlab   : $yellow Open ${green}Disassembler, ${cyan}Debugger, ${blue}Editor ${yellow}in 3 xterms on a specified binary.
-  $green move     : $yellow Move Crusor to Specified ${green}X$yellow and${green} Y
+  $green move     : $yellow Move Crusor to Specified ${green}Y$yellow and${green} X
   $green press    : $yellow Wait for a specified Key Press
   $green cout     : $yellow Print A  Success Message To Screen
   $green cerr     : $yellow Print An ${red}Error$yellow Message To Screen 

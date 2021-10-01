@@ -5,9 +5,9 @@ op="${green}Using:                 ${white}:${yellow} $WHAT
  ${red}Malware Section:
  -----------------
    ${green}Malware             ${white}:${yellow} $MALWARE
-   ${green}Malware Type        ${white}:${yellow} $TYPE
-   ${green}Victim IP Address   ${white}:${yellow} $VICTIM (Used also in listening)
-   ${green}Victim PORT         ${white}:${yellow} $PORT   (Used Also in listening)
+   ${green}Malware Action      ${white}:${yellow} $ACTION
+   ${green}Victim IP Address   ${white}:${yellow} $VICTIM
+   ${green}Victim PORT         ${white}:${yellow} $PORT
    ${green}Victim Platform     ${white}:${yellow} $PLATFORM
    ${green}Victim ARCHITECTURE ${white}:${yellow} $ARCH
 
@@ -49,9 +49,11 @@ printf "%s\n" "-------                          ------                    ------
  d="
 ${green}VICTIM                          $cyan$VICTIM\t\t${white}   Victim Ip Address, Required for all malwares
 ${green}PORT                            $cyan$PORT\t\t\t${white}   Victim Port, Required for all malwares
+${green}LHOST                           $cyan$LHOST\t\t${WHITE}   Your Host To Listen On For Incoming Traffics
+${green}LPORT                           $cyan$LPORT\t\t\t${WHITE}   Your Port To Listen On For Incoming Traffics
 ${green}MALWARE                         $cyan$MALWARE\t\t${white}   Malware Type, Required for building malwares
 ${green}PLATFORM                        $cyan$PLATFORM\t\t\t${white}   Victim Platform, Or System, required for building malware
-${green}TYPE                            $cyan$TYPE\t\t${white}   Malware Actions, Reverse shell, or bind and so on 
+${green}ACTION                          $cyan$ACTION\t\t${white}   Malware Actions, Reverse shell, or bind and so on 
 ${green}ARCH                            $cyan$ARCH\t\t\t${white}   Victim Architecture, Required for Cross Compiling, or Malware convertions
 
 ${green}SYSTEM                          $cyan$SYSTEM\t\t\t${white}   Victim Operating System, required for building Bombs
@@ -72,10 +74,13 @@ d="${white}0: $yellow Default $white
 2: $yellow Classic $white
 3: $yellow Commedy $white
 4: $yellow Long Prompt $white
-5: $yellow Simple $white
-6: $yellow No Prompt\n"
+5: $yellow Normal PS1 $white
+6: $yellow No Prompt $white
+7: $yellow Simple $white
+8: $yellow Red Blood Prompt $white
+9: $yellow Listed prompt\n"
 printf "$d"
-cout "Note: Usage: prompt (1, 2, 3, 4, 5 or 6)"
+cout "Note: Usage: prompt (1, 2, 3, 4, 5, 6, 7, 8 or 9)"
 }
 
 if [ "$1" == '' ]; then

