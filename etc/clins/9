@@ -1,0 +1,4 @@
+cin(){
+  printf "${white}┌──($(ls --color=yes | sed s/'\n'/' '/g -z)\b)\n└─>>>>"
+  read -p " " -e $1
+}

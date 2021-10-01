@@ -3,18 +3,22 @@ source $PODGL/lib/colors
 
 # Here You Can Set Your Own Envirenment Variables to work with
 
+### DO Not Edit Any Thing here, Just Add What you want at the end of the file
 
-# Envirenment Variables
+# Attacking (Do Not edit)
 
 export VICTIM='0.0.0.0      '
 export PORT=4444
+
+export LHOST='              '
+export LPORT=''
 
 # Type Of File to Build, Malware or Bomb
 export WHAT=""
 
 # Malware Builder Handler Data
 export MALWARE="             "
-export TYPE="             "
+export ACTION="             "
 export PLATFORM=""
 export ARCH=""
 
@@ -22,6 +26,6 @@ export ARCH=""
 export SYSTEM=""
 export TARGET="           "
 
-# User Info
+# User Info, Like Online ID For Chatting Rooms and so on
 
-ONLINE_ID=$(cat $PODGL/etc/iChat/name.i)
+export ONLINE_ID=$(cat $PODGL/etc/iChat/name.i)
