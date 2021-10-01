@@ -17,6 +17,10 @@ int main(int argc, char** argv){
    }
 
    stat(argv[1],&file);
+   if (strcmp(argv[1]+strlen(argv[1])-4, ".enc")!=0){
+      fatal("Error: File Format Not Reconized, This Error Might Happen if you Change Encrypted File's Extension (.enc) or If Your Trying to decrypt a non-encrypted file");
+      return 1;
+   }
    char newfile[strlen(argv[1])];strncpy(newfile,argv[1],strlen(argv[1])-4);strcat(newfile,".dec");
    // Openning argv[1] File
 

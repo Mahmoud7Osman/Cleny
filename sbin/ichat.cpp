@@ -98,18 +98,18 @@ void print(char* str, int pair){
 void UpdateUpperScreen(){
 
    wbkgd(about_me, COLOR_PAIR(4));
-   wbkgd(details,  COLOR_PAIR(3));
+//   wbkgd(details,  COLOR_PAIR(3));
 
    waddstr(about_me, aboutme);
 
    wrefresh(about_me);
-   wrefresh(details);
+//   wrefresh(details);
 
    wmove(about_me, 0, 0);
-   wmove(details, 0, 0 );
+//   wmove(details, 0, 0 );
 
    touchwin(about_me);
-   touchwin(details );
+//   touchwin(details );
 }
 
 void MessageCounter(){
@@ -249,7 +249,7 @@ int main(int argc, char** argv){
 
    you.name=(char*)malloc(16);
 
-// about_me=newwin(10,50, 0, 0);
+   about_me=newwin(10,50, 0, 0);
    send(client,  me.name, strlen(me.name), 0);
    recv(client, you.name, 16, 0);
 
@@ -274,7 +274,7 @@ int main(int argc, char** argv){
 
    scrollok(stdscr, TRUE);
    scrollok(iscr ,  TRUE);
-
+   UpdateUpperScreen();
    thread Sync(SyncMsg);
    wclear(stdscr);
    while (1){
@@ -385,8 +385,7 @@ void SyncMsg(){
     waddstr(iscr, msg);
     wrefresh(iscr);
     bzero(msg, 200);
-    wmove(stdscr, y-2, 4);
-    wrefresh(stdscr);
+    refresh();
     MessageCounter();
   }
 }
