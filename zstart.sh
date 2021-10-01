@@ -30,7 +30,7 @@ HISTFILE=$PODGL/var/digle_history
 #
 
 # RC Script
-#digle etc/rc.local
+source etc/rc.local
 
 # INIT.D scripts
 for i in $(ls $PODGL/etc/init.d);do
@@ -66,7 +66,7 @@ if [ -f ".update" ];then
 fi
 
 
-history -c
+#history -c
 source $PODGL/etc/envir
 while [ 1 ]; do
  cin cmd
@@ -107,4 +107,4 @@ while [ 1 ]; do
  done
 done
 
-history -c
+#history -c
