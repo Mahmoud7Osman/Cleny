@@ -75,6 +75,13 @@ else
 source $PODGL/etc/clins/$1
 fi
 }
+sps(){
+  cin(){
+     printf "${white}┌──[${URed}DIGLE$white]──[$red$(printf $VICTIM | sed s/" "//g)$white]─[$red$PORT$white]\n$white▼$white\n$green"
+     read -e $1
+     printf "$blgreen↓$white\n"
+  }
+}
 say(){
   espeak -v en-us "\"$@\""
 }
