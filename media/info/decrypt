@@ -1,0 +1,25 @@
+- info:
+  Decrypt Any File encrypted With 'encrypt' Command And Write Result into filename.dec
+
+  You Can Change or Remove Decrypted File Extension (.dec).
+ 
+  Warning: Do Not Try To Decrypt A non-encrypted File or you will corrupt it.
+
+- usage:
+            File Name Or Path
+           ____________________
+  decrypt         <arg>
+                 -------
+                    1
+
+  decrypt <file name>
+
+- examples:
+   
+1-)  decrypt my_notes.txt.enc  (Will Result a new file named my_notes.txt.dec)
+
+2-)  decrypt mypasswords.enc
+
+3-)  decrypt a.out.enc (Will Result an a.out.dec)
+
+4-)  decrypt netdiscover.enc

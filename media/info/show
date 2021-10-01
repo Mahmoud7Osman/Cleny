@@ -1,0 +1,17 @@
+info:
+   show Something in the Digle Environment, Maybe a Variable, Options, And so on.
+   execute show with no arguments to get list of all showable things.
+
+usage:
+         something to show
+          ______________
+   show    <Something>
+           -----------
+                1
+example: 
+    
+   show            (Without Arguments Will Print all showayble things)
+   show options    (Shows Digle Options)
+   show Values     (Like show options)
+   show prompts    (Digle Environment Available Prompts)
+

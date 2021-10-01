@@ -1,0 +1,23 @@
+- info: 
+  Encrypt Any File And Write Result into filename.enc
+
+  Warning: Do Not Change The Encrypted File Extension (.enc) Or You will face errors While Decrypting The File
+
+- usage:
+            File Name Or Path
+           ____________________
+  encrypt         <arg>
+                 -------
+                    1
+
+  encrypt <file name>
+
+- examples:
+
+1-)  encrypt my_notes.txt  (Will Result a new file named my_notes.txt.enc)
+
+2-)  encrypt /etc/passwd  (Will Result a new file in the /etc directory /etc/passwd.enc)
+
+3-)  encrypt a.out
+
+4-)  encrypt /bin/ls (Will Result a new file in the /bin directory /bin/ls.enc)
