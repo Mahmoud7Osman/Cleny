@@ -93,6 +93,7 @@ chmod +x etc/rc.local
 chmod +x run/*
 chmod +x bin/*
 chmod +x dev/*
+chmod +x zstart.sh
 
 printf "\nSetup Finished Successfully, If you're using this for the first time, type 'usage' to start.!\n"
 sleep 1
