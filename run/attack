@@ -32,7 +32,7 @@ if   [ "$VICTIM" == '0.0.0.0' ] || [ "$VICTIM" == '' ];then
 elif [ "$PORT" == '' ];then
   cerr Error Target Port is not Defined, Execute info victim
   exit 1
-elif [ "$LHOST" == '' ];then
+elif [ "$LHOST" == '              ' ];then
   cerr "Error Your LHOST Not Set, The Host We Should Listen On For Incoming Sessions, Execute show options, Execute info lset"
   exit
 elif [ "$LPORT" == '' ];then
