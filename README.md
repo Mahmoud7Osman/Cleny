@@ -8,7 +8,7 @@
   <li>LiveOverFlow  Twitter:         https://twitter.com/LiveOverflow </li>
   <li>LiveOverflow  Patreon:         https://www.patreon.com/liveoverflow</li>
 </ul>
-<h4> LiveOverflow's Youtube Channels, The Best Channels For Hacking, I Learned alot of things, alot alot of things..., I Don't Now How To Thank LiveOverflow So I Created This Repository With This README. You Need First To Subscribe to those youtube channels in order to git clone this repo :) Please Subscribe, Or Pl34s3 Subscr1b3 :) .
+<h4> LiveOverflow's Youtube Channels, The Best Channels For Hacking, I Learned alot of things, alot alot of things..., I Don't Now How To Thank LiveOverflow So I Created This Repository. You Need First To Subscribe to those youtube channels in order to git clone this repo :) Please Subscribe, Or Pl34s3 Subscr1b3 :) .
 <h3> Please Subscribe to all LiveOverflow's Youtube Channels, Please Follow LiveOverflow on Twitter, Please Support LiveOverflow On <a href=https://www.patreon.com/liveoverflow>Patreon</a>, Don't Be a Hacker, just Be a H4ck3r.</h3>
 
 
