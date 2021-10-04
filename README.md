@@ -32,6 +32,12 @@ Digle, Or Digital Eagle, A Massive Command Line Based Environment Aimed At Hacki
   <li> Digle Provide an Exellent Terminal-Based Chatting App (2 Members Only For Every Chatting Room).</li>
   <li> Digle Provide Some Text-Based Games, 2D and 3D For Fun Only</li>
 </ul>
+<h2>Tools And Properties That Currently Working On To Add</h2>
+<ol>
+  <li> A Linux Automated Keylogger That Finds The Keyboard Event File Automatically And Sends Keystrokes in an Encrypted Form Back to Attacker Over TCP.</li>
+  <li> A File Injection Utility That Support Injecting Scripts in Each Others to run together such as injecting Binaries to run with Interpreted Languages Such as Python, Bash...</li>
+  <li> A Process Injection Utility</li>
+</ol>
 <h2>Future's Updates if People Liked Digle</h2>
 <ol>
   <li> Binary File Code Injection (Especially For ELF)</li>
