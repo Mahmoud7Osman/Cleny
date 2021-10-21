@@ -1,17 +1,6 @@
 <h1> Digital Eagle (Digle) </h1> (Note: This Project isn't Finished Yet, it's Under Development, Some Tools will not work)
 <h6> Hell0 W0rld </h6>
 
-<h4><b><i>First And Before We Begin,  All The Thanks To LiveOverFlow For Helping Me To Develop My Skills And my Vision, And For Inspiring Me To Create This Repository</i></b></h4>
-<ul>
-  <li>LiveOverFlow  Youtube Channel: https://www.youtube.com/c/LiveOverflow (Best Place To learn Hacking)</li>
-  <li>LiveUnderFlow Youtube Channel: https://www.youtube.com/c/LiveUnderflow</li>
-  <li>LiveOverFlow  Twitter:         https://twitter.com/LiveOverflow </li>
-  <li>LiveOverflow  Patreon:         https://www.patreon.com/liveoverflow</li>
-</ul>
-<h4> LiveOverflow's Youtube Channels, The Best Channels For Hacking, I Learned alot of things, alot alot of things..., I Don't Now How To Thank LiveOverflow So I Created This Repository. You Need First To Subscribe to <a href=https://www.youtube.com/c/LiveOverflow>LiveOverflow's</a> youtube channels in order to git clone this repo :) Please <a href=https://www.youtube.com/c/LiveOverflow>Subscribe</a>, Or Pl34s3 <a href=https://www.youtube.com/c/LiveOverflow>Subscr1b3</a> :) .
-<h3> Please Subscribe to all LiveOverflow's Youtube Channels, Please Follow LiveOverflow on Twitter, Please Support LiveOverflow On <a href=https://www.patreon.com/liveoverflow>Patreon</a>, Don't Be a Hacker, just Be a H4ck3r.</h3>
-
-
 <h2> Have You Tried An AI Powered Hacking Environment ??? </h2>
 <h3> Introducing Digle: </h3>
 
