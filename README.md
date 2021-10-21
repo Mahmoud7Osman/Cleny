@@ -4,10 +4,21 @@
 <h2> Have You Tried An AI Powered Hacking Environment ??? </h2>
 <h3> Introducing Digle: </h3>
 
-<h4>Easy To Use, PowerFul, Colorful Hacking Environment, </h4>
+<h4>Easy To Use, PowerFul, Colorful, Fast, Intelligent, Hacking Environment, `Console Application`</h4>
 
-Digle, Or Digital Eagle, A Massive Command Line Based Environment Aimed At Hacking, (Probably This Tool is For Post Exploitation Right Now.)
- 
+Digle, Or Digital Eagle, A Massive Command Line Based Environment Aimed At Hacking.
+
+If Your a Skilled Social Engineer, Then Digle is for you, Why?
+<h2>Because</h2>
+<ul>
+ <li>Because, Digle Support Building Intelligent Malwares, Different File Types, With User-Specified Power And Properties of the malware</li>
+ <li>Because, Digle Support Building Keyloggers, Intelligent And HollyWood-Like Data Receiver And Displayer</li>
+ <li>Because, Digle's Malwares Are Made To Hold Himselfs Intelligently...</li>
+ <li>Because, Digle Is HollyWood Like...</li>
+ <li>Because, It's Dedicated For You.....</li>
+</ul>
+
+
 
 <h2>Digle's Tool Power</h2>
 <ul>
