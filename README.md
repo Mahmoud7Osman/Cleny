@@ -59,4 +59,4 @@ If Your a Skilled Social Engineer, Then Digle is for you, Why?
 
 
 <h2>ScreenShots</h2>
-<img src=media/sct/Screenshot_2021-10-21_22_18_40>
+<img src=media/sct/Screenshot_2021-10-21_22_18_40.png>
