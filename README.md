@@ -55,3 +55,8 @@ If Your a Skilled Social Engineer, Then Digle is for you, Why?
   <li>Execute info followed by a command name to learn its usage</li>
   <li>Enjoy Hacking</li>
 </ol>
+
+
+
+<h2>ScreenShots</h2>
+<img src=media/sct/Screenshot_2021-10-21_22_18_40>
