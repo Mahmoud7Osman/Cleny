@@ -29,7 +29,7 @@ If Your a Skilled Social Engineer, Then Digle is for you, Why?
   <li> Digle Malwares, From Basic Reverse Shells into Super Interactive Remote Controlled Malware, Named Digle Super Malware Or DSM</li>
   <li> Digle's Super Malwares are intelligent, they hide Themselves, They Detect Virtual Machines Or Debugging, They can inject themselves in a Running Process, They can Destroy Device if user tried to delete The Malware.</li>
   <li> Digle Can inject Files with Each Others, Helping User to inject a pre-spawned malware in a specified file or script, Injection Supports Many Extensions</li>
-  <li> Digle Provide an Exellent Terminal-Based Chatting App (2 Members Only For Every Chatting Room).</li>
+  <li> Digle Provide an Exellent Terminal-Based Chatting App Powered by the ncurses lib(2 Members Only For Every Chatting Room).</li>
   <li> Digle Provide Some Text-Based Games, 2D and 3D For Fun Only</li>
 </ul>
 <h2>Tools And Properties That Currently Working On To Add</h2>
