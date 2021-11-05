@@ -1,0 +1,21 @@
+info:
+  Set Environment Variables And Values
+  To See Environment Variables Used in Performing Actions Like building Bombs or Malwares execute 'show options'
+
+Usage:
+
+   Value Holder Name   Value To Hold
+      __________         _________
+lset     name              value
+        -------           -------
+           1                 2
+
+example:
+
+  lset LHOST 127.0.0.1
+  lset LPORT 4444
+  
+  lset PLATFORM windows
+  lset MALWARE  keylogger
+
+
