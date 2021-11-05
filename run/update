@@ -85,7 +85,7 @@ cd - &> /dev/null
 
 
 
-printf "export CCWD=\$PWD\ncd $PODGL\n$PODGL/zstart.sh \$@" > $PREFIX/bin/digle && chmod 755 $PREFIX/bin/digle
+printf "export CCWD=\$PWD\ncd $PODGL\n$PODGL/zstart.sh \"\$@\"" > $PREFIX/bin/digle && chmod 755 $PREFIX/bin/digle
 printf "$PODGL/bin/\n$PODGL/run/" > etc/PATH.dgl
 
 chmod +x etc/init.d/*
@@ -93,7 +93,6 @@ chmod +x etc/rc.local
 chmod +x run/*
 chmod +x bin/*
 chmod +x dev/*
-chmod +x zstart.sh
 
 printf "\nSetup Finished Successfully, If you're using this for the first time, type 'usage' to start.!\n"
 sleep 1
