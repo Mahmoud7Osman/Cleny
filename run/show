@@ -4,12 +4,14 @@ op="${green}Using:                 ${white}:${yellow} $WHAT
 
  ${red}Malware Section:
  -----------------
-   ${green}Malware             ${white}:${yellow} $MALWARE
-   ${green}Malware Action      ${white}:${yellow} $ACTION
-   ${green}Victim IP Address   ${white}:${yellow} $VICTIM
-   ${green}Victim PORT         ${white}:${yellow} $PORT
-   ${green}Victim Platform     ${white}:${yellow} $PLATFORM
-   ${green}Victim ARCHITECTURE ${white}:${yellow} $ARCH
+   ${green}Malware                ${white}:${yellow} $MALWARE
+   ${green}Malware Action         ${white}:${yellow} $ACTION
+   ${green}Victim IP Address      ${white}:${yellow} $VICTIM
+   ${green}Victim PORT            ${white}:${yellow} $PORT
+   ${green}Victim Platform        ${white}:${yellow} $PLATFORM
+   ${green}Victim ARCHITECTURE    ${white}:${yellow} $ARCH
+   ${green}Your Ip To Listen On   ${white}:${yellow} $LHOST
+   ${green}Your Port To Listen On ${white}:${yellow} $LPORT
 
  ${red}Shell Section:
  -----------------
@@ -43,7 +45,7 @@ printf "$d"
 
 
 options(){
-printf "${white}Those Values (Colored ${green}green${white}) Can Be Changed By using the '${green}lset${white}' Command\n"
+printf "${white}Those Values (Colored ${green}green${white}) Can Be Changed By using the '${green}set${white}' Command\n"
 printf "${green}Option			         ${yellow}Value			${cyan}   Description\n"
 printf "%s\n" "-------                          ------                    ------------"
  d="
@@ -53,6 +55,7 @@ ${green}LHOST                           $cyan$LHOST\t\t${WHITE}   Your Host To L
 ${green}LPORT                           $cyan$LPORT\t\t\t${WHITE}   Your Port To Listen On For Incoming Traffics
 ${green}MALWARE                         $cyan$MALWARE\t\t${white}   Malware Type, Required for building malwares
 ${green}PLATFORM                        $cyan$PLATFORM\t\t\t${white}   Victim Platform, Or System, required for building malware
+${green}SAVE                            $cyan$SAVE\t\t${white}           Output Attack Data (Like Keystrokes...)
 ${green}ACTION                          $cyan$ACTION\t\t${white}   Malware Actions, Reverse shell, or bind and so on 
 ${green}ARCH                            $cyan$ARCH\t\t\t${white}   Victim Architecture, Required for Cross Compiling, or Malware convertions
 
