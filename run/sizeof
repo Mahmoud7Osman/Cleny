@@ -1,0 +1,1 @@
+if [ "x$1" == "x" ];then exit 1; fi;source $PODGL/lib/colors; wc -c $1 | cut -d' ' -f1 | sed -z s/"\n"//g && printf "${yellow} Bytes\n"
