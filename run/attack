@@ -4,7 +4,12 @@ source $PODGL/lib/colors
 dexit(){
  exit
 }
-
+camera(){
+   bash $PODGL/dev/dev5/main.sh
+}
+socialmedia(){
+   bash $PODGL/dev/dev4/main.sh
+}
 phone(){
  if [ "$1" == '' ];then
    cerr Please Enter A Phone Number With The Country Code
@@ -67,7 +72,16 @@ fi
 }
 
 notify "Welcome To The Digle Attacking Utility"
-
+if [ "$1" == "phone" ];then
+   phone $2
+   exit 0
+elif [ "$1" == "socialmedia" ];then
+   socialmedia
+   exit 0
+elif [ "$1" == "camera" ];then
+   camera
+   exit 0
+fi
 sleep 0.5
 if [ "$VICTIM" == '0.0.0.0      ' ] || [ "$VICTIM" == '             ' ];then
   unknown Victim IP is Not Defined
