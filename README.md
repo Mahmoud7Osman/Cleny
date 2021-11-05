@@ -1,6 +1,6 @@
 <h1> Digital Eagle (Digle) </h1> (Note: This Project isn't Finished Yet, it's Under Development, Some Tools will not work)
 <h6> Hell0 W0rld </h6>
-
+This Project Focus Firstly On Hacking Devices With Malware, You May Not Find A Big Amount Of Vulnerabilities Exploiters Here.
 <h2> Have You Tried An AI Powered Hacking Environment ??? </h2>
 <h3> Introducing Digle: </h3>
 
