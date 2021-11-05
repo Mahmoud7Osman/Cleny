@@ -1,24 +1,24 @@
 source $PODGL/lib/colors
 
 # Output
-cout(){
+cout2(){
 printf $green"☢$white %s\n" "$*"
 }
 # Error
-cerr(){
+cerr2(){
 printf $red"☢$white %s\n" "$*"
 }
 # logger
 clog(){
-printf "$green`whoami`$white @ `date` $yellow%s\n" "$*" >> $PODGL/var/log/slog.bgl
+printf "$green`whoami`$red @ `date`: $yellow%s\n" "$*" >> $PODGL/var/log/slog.bgl
 }
 # Check Box Yes
 cby(){
-printf $white"["$green" ✔ "$white"]$white %s\n" "$*"
+printf $green"✔"$white" %s\n" "$*"
 }
 # Check Box No
 cbn(){
-printf $white"["$red" ✘ "$white"]$white %s\n" "$*"
+printf $red"✘"$white" %s\n" "$*"
 }
 
 cin(){
@@ -50,7 +50,7 @@ prepare(){
 dir(){
   $PREFIX/bin/dir $1 --color
 }
-lset(){
+set(){
  if [ "$1" == '' ] || [ "$2" == '' ];then
     cerr No Enough Arguments, see info lset
 
@@ -86,10 +86,10 @@ say(){
   espeak -v en-us "\"$@\""
 }
 
-succeed(){
+cout(){
   printf "$white[$BBlue+$white] %s\n" "$*"
 }
-failed(){
+cerr(){
   printf "$white[$BRed-$white] %s\n" "$*"
 }
 notify(){
@@ -104,4 +104,15 @@ inform(){
 
 unknown(){
   printf "$white[${BPurple}?$white] %s\n" "$*"
+}
+random(){
+  if [ "$1" == "prompt" ];then
+     source $PODGL/etc/clins/$(expr $RANDOM % 10)
+  fi
+}
+enable(){
+   export ${1^^}=1 2>/dev/null
+}
+disable(){
+   export ${1^^}=0 2>/dev/null
 }
