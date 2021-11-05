@@ -9,11 +9,52 @@ export OPT=$PATH
 source $PODGL/lib/fsh.cfg.sh
 source $PODGL/lib/colors2
 
-if [ "$1" != '' ];then
+initd(){
+for i in $(ls $PODGL/etc/init.d);do
+   $PODGL/etc/init.d/$i
+   if [ "$?" == 1 ];then
+      exit 1
+   fi
+done
+}
+
+optionhandler(){
+   if [ "$1" == "--std-shell" ] || [ "$1" == "-s" ];then
+      export PATH=$PATH:$PODGL/bin/:$PODGL/run/
+      source $PODGL/etc/rc.local
+      source $PODGL/etc/envir
+      source $PODGL/lib/fsh.cfg.sh
+      cat $PODGL/etc/motd
+      initd
+      $SHELL
+   fi
+   if [ "$1" == "--exec" ] || [ "$1" == "-e" ];then
+      export PATH=$PODGL/bin/:$PODGL/run/:$PATH
+      source $PODGL/etc/rc.local
+      source $PODGL/etc/envir
+      source $PODGL/lib/fsh.cfg.sh
+      if [ -f "$PODGL/bin/$2" ]; then
+	 "$PODGL/bin/$2"
+         exit $?
+      fi
+      if [ -f "$PODGL/run/$2" ]; then
+         "$PODGL/run/$2"
+         exit $?
+      fi
+      $2
+      exit $?
+   fi
+}
+if [ "${1:0:1}" == "-" ];then
+   optionhandler $1 "$2"
+   exit 0
+fi
+
+if [ "$1" != ''  ];then
     cd $CCWD
     chmod +x $1
     PATH=$PATH:$PODGL/bin:$PODGL/run
-    . ./$1
+    . $1
     exit
     PATH=$OPT
 fi
@@ -33,13 +74,7 @@ HISTFILE=$PODGL/var/digle_history
 source etc/rc.local
 
 # INIT.D scripts
-for i in $(ls $PODGL/etc/init.d);do
-   $PODGL/etc/init.d/$i
-   if [ "$?" == 1 ];then
-      exit 1
-   fi
-done
-
+initd
 # Aliases
 alias   ls="ls --color"
 alias grep="grep --color"
@@ -69,6 +104,9 @@ fi
 #history -c
 source $PODGL/etc/envir
 while [ 1 ]; do
+ if [ "$RANDOM_PROMPT" == "1" ];then
+    random prompt
+ fi
  cin cmd
  if [ "$cmd" == "" ];then
    continue
