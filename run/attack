@@ -108,11 +108,11 @@ sleep 0.5
 cout "Using ${GREEN}$LHOST$WHITE For Remote Session Handler At Port ${GREEN}$LPORT"
 sleep 1
 
-if [ "$MALWARE" == "reverse_shell" ] || [ "$MALWARE" == "bind_shell" ];then
+if [ "$ACTION" == "reverse_shell" ] || [ "$ACTION" == "bind_shell" ];then
    shells;
 elif [ "$MALWARE" == "keylogger" ];then
    kylog;
 else
-   cerr "Attack Failed To Determine What You Want, Execute show options and make sure you entered options correctly using the lset command"
+   cerr "Attack Failed To Determine What You Want, Execute show options and make sure you entered options correctly using the set command"
 
 fi
