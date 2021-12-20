@@ -13,7 +13,7 @@ If Your a Skilled Social Engineer, Then Digle is for you, Why?
 <ul>
  <li>Because, Digle Support Building Intelligent Malwares, Different File Types, With User-Specified Power And Properties</li>
  <li>Because, Digle Support Building Keyloggers, Intelligent And HollyWood-Like Data Receiver And Displayer</li>
- <li>Because, Digle's Malwares Are Made To Hold Himselfs Intelligently, Evading Any Kind Of Detection With Some Prespecified Decisions to follow...</li>
+ <li>Because, Digle's Malwares Are Made To Hold Himselfs Intelligently, Evading Any Kind Of Detection With Some Pre-specified Decisions to follow...</li>
 </ul>
 <h2>More Information About This Software</h2>
 The main goal behind this software is to create a Command-Line Environment For Hacking, Programming, Testing...., Moving Into Another Level With Shell Scripting, Output Displaying, Terminal I/O Control With The <a href=https://www.freedesktop.org/wiki/Ncurses>C++ Ncurses Library</a>, And So On, This is mostly used for Post Exploitation Because it supports One-Liner Local infection (One-Liner Local Infection currently under testing).
