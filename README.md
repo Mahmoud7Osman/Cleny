@@ -33,6 +33,7 @@ The main goal behind this software is to create a Command-Line Environment For H
 </ul>
 <h2>Tools And Properties That Currently Working On To Add</h2>
 <ul>
+ <li>The Support Of My Malware And Exploit Development Library <a href=https://github.com/Mahmoud7Osman/CVenom>CVenom</a>, I Recommend Malwares And Exploits Developers To Give it a Try, It's Free From "Working with Pointers", Soon This Project Will Support The Instant Write & Execute Mechanism For C++ Using The Preprocessors Power</li>
  <li>Optimizing Interface, Prompt,...</li>
   <li> A Linux Automated Keylogger That Finds The Keyboard Event File Automatically And Sends Keystrokes in an Encrypted Form Back to Attacker Over TCP.</li>
   <li> A File Injection Utility That Support Injecting Scripts in Each Others to run together such as injecting Binaries to run with Interpreted Languages Such as Python, Bash...</li>
