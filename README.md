@@ -59,6 +59,3 @@ The main goal behind this software is to create a Command-Line Environment For H
 </ol>
 
 
-
-<h2>ScreenShots</h2>
-<img src=media/sct/Screenshot_2021-10-21_22_18_40.png>
