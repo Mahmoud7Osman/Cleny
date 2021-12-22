@@ -1,0 +1,8 @@
+source $PODGL/lib/fsh.cfg.sh
+
+if [ "$1" == '' ];then cerr "No Arguments, See info addengine"; fi
+cout "Adding Digle Into $1/engine"
+mkdir "$1"/engine
+cp $PODGL/* -r "$1"/engine/
+cout "Added Digle Engine To $1/engine/"
+clog "Added Digle Engine To $1/engine/"

