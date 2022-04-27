@@ -45,6 +45,7 @@ optionhandler(){
       exit $?
    fi
 }
+exit 0
 if [ "${1:0:1}" == "-" ];then
    optionhandler $1 "$2"
    exit 0
