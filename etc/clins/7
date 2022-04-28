@@ -1,6 +1,0 @@
-source $PODGL/lib/colors
-
-cin(){
-  printf "${URed}DIGLE${IWhite}> "
-  read $1
-}

@@ -1,4 +1,0 @@
-cin(){
-  printf "${white}┌──($green$(printf "$VICTIM" | sed s/" "//g)$white)==($green$PORT$white)==($green$WHAT$white)==($green$(printf "$MALWARE" | sed s/" "//g)$white$white)==($green$TYPE$white)==($green$PLATFORM$white)==($green$ARCH$white)==($green$(printf "$TARGET" | sed s/" "//g)$white$white)==($green$SYSTEM$white)----[${red}Digital Eagle${white}]\n└─>>>>"
-  read -p " " -e $1
-}

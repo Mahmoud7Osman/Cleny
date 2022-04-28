@@ -1,4 +1,0 @@
-cin(){
-  printf "$white(-$green$(whoami)$cyan@${red}Digle$white-)#"
-  read -p " " -e $1
-}
