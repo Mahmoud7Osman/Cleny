@@ -1,9 +1,0 @@
-#!/bin/bash
-
-source $PODGL/lib/fsh.cfg.sh
-
-printf "${red}CPU$yellow Fork Bomber                      (${green}lset$white TARGET ${cyan}cpu/)$white\n"
-printf "${red}DISK$yellow Empty Files Bomber              (${green}lset$white TARGET ${cyan}disk)\n"
-printf "${red}MEMORY$yellow Use 100%% Of Memory            (${green}lset$white TARGET ${cyan}memory/)\n"
-echo
-cout "Make sure to execute 'use bomb' before executing 'build' command\n"

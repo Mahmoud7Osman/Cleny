@@ -1,4 +1,0 @@
-sudo apt-get install qt5-doc qtbase5-examples qtbase5-doc-html
-sudo apt-get install build-essential
-sudo apt-get install qtcreator
-sudo apt install qtpositioning5-dev
