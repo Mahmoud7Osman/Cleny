@@ -1,6 +1,0 @@
-if [ "$1" == '' ];then
-   printf "Error: No Arguments\n"
-   exit 1
-fi
-
-g++ $@ -lncurses
