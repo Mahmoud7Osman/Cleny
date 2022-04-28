@@ -1,8 +1,0 @@
-source $PODGL/lib/fsh.cfg.sh
-
-if [ "$1" == ''  ];then
-   cerr Usage: surl "<URL>"
-   exit 1
-fi
-
-curl -sIL $1 | grep ^Location;

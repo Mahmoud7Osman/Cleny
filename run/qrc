@@ -1,9 +1,0 @@
-source $PODGL/lib/fsh.cfg.sh
-
-if [ "$1" == '' ];then
-  cerr Usage: qrc "<URL>"
-  exit 1
-fi
-
-printf "$white"
-curl qrenco.de/$1
