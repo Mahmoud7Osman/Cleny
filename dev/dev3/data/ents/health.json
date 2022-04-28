@@ -1,9 +1,0 @@
-{
- "name": "Health",
- "team_override": "pickup",
- "width": 0.14,
- "height": 0.14,
- "health": 0.01,
- "damage": -0.5,
- "frames": ["health"]
-}
