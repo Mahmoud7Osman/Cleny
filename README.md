@@ -4,4 +4,3 @@
 <strong>Info:</strong> Language Syntax is the Same as C++ Syntax, New Syntaxes Are Added With Preprocessor Directives As Xonory is a C++ Dependent Programming Language, It Uses g++ As Compiler
 
 <h3>Get Your <a href="">EBook</a> For Malware Development Using Xonory</h3>
- 
