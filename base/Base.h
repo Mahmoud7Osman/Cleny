@@ -1,7 +1,7 @@
 class File{
    public:
 	int fd;
-	char* filename;
+	char* name;
 	char* data;
 	char* EP;
 	size_t size;
@@ -16,7 +16,7 @@ class File{
 				return;
 
 			fstat(fd, &filestat);
-			filename=fn;
+			name=fn;
 			size=filestat.st_size;
 			data=(char*)malloc(size);
 			EP=data;
@@ -27,15 +27,37 @@ class File{
 			read(fd, data, size);
 	}
 
+	void ResetDP(){
+		data=EP;
+	}
+
 	~File(){
 		free(EP);
 	}
 };
 
 class Syntax{
+   public:
 
+	File* file;
+	Syntax(File* f){
+		file=f;
+	}
+	void Divs(){
+		for (int i; i<file->size; i++){
+			if (*(file.data+i) == '<'){
+				while (file.data++){
+					if (*file.data == ' ' || *file.data == '<'){
+						fatalerror("Illegal Character Detected Inside A Tag", &file);
+						i=file->size;
+						break;
+					}
+				}
+			}
+		}
+	}
 };
 
 class Tag{
-	
+
 };
