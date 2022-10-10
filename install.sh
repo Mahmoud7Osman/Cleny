@@ -12,6 +12,8 @@ printf "Thank You For Installing Cleny\n"
 
 if [ ! -f "bin/cleny" ]; then
 	cp bin/x64_cleny /bin/cleny
+	chmod uog+x /bin/cleny
 	exit 0
 fi
 cp bin/cleny /bin/cleny
+chmod uog+x /bin/cleny
