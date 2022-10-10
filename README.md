@@ -19,5 +19,5 @@
 # Simple Examples
 <p>This Code Will Print A White Hello World</p>
 <pre>&ltwhite&gtHello World&lt/white&gt</pre>
->p>This One Will Print a Red Blinking Hello World</p>
+<p>This One Will Print a Red Blinking Hello World</p>
 <pre>&ltblinkred&gtHello World&lt/blinkred&gt</pre>
