@@ -18,6 +18,6 @@
 
 # Simple Examples
 <p>This Code Will Print A White Hello World</p>
-<pre><plaintext><white>Hello World</white></plaintext></pre>
+<pre><white>Hello World</white></pre>
 >p>This One Will Print a Red Blinking Hello World</p>
 <pre><plaintext><blinkred>Hello World</blinkred></plaintext></pre>
