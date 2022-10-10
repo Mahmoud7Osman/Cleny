@@ -1,8 +1,43 @@
-typedef struct{
-	int             tagid;
-
-	Element*        elementclass;
-	struct stack*   back;
-}
-stack;
-
+const char* elements[] = {
+	"red", "\033[0;91m",
+	"blue", "\033[0;94m",
+	"yellow", "\033[0;93m",
+	"green", "\033[0;92m",
+	"purple", "\033[0;95m",
+	"cyan", "\033[0;96m",
+	"white", "\033[0;97m",
+	"black", "\033[0;30m",
+	"blinkred", "\033[5;91m",
+	"blinkblue", "\033[5;94m",
+	"blinkyellow", "\033[5;93m",
+	"blinkgreen", "\033[5;92m",
+	"blinkpurple", "\033[5;95m",
+	"blinkcyan", "\033[5;96m",
+	"blinkwhite", "\033[5;97m",
+	"blinkblack", "\033[5;30m",
+	"boldred", "\033[1;91m",
+	"boldblue", "\033[1;94m",
+	"boldyellow", "\033[1;93m",
+	"boldgreen", "\033[1;92m",
+	"boldpurple", "\033[1;95m",
+	"boldcyan", "\033[1;96m",
+	"boldwhite", "\033[1;97m",
+	"boldblack", "\033[1;30m",
+	"underlinered", "\033[4;91m",
+	"underlineblue", "\033[4;94m",
+	"underlineyellow", "\033[4;93m",
+	"underlinegreen", "\033[4;92m",
+	"underlinepurple", "\033[4;95m",
+	"underlinecyan", "\033[4;96m",
+	"underlinewhite", "\033[4;97m",
+	"underlineblack", "\033[4;30m",
+	"onred", "\033[41m",
+	"onblue", "\033[44m",
+	"onyellow", "\033[43m",
+	"ongreen", "\033[42m",
+	"onpurple", "\033[45m",
+	"oncyan", "\033[46m",
+	"onwhite", "\033[47m",
+	"onblack", "\033[40m",
+	"spaced", " ",
+};
