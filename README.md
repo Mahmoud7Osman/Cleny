@@ -11,7 +11,7 @@
 # Learn Usage
 <p>So Easy, So Simple, So Powerful</p><br>
 <ul>
-<a>Language Syntax And Core Functionality</a>
+      <li><a href>Language Syntax And Core Functionality</a></li>
       <li><a href>Colors</a></li>
       <li><a href>Blinking Colors</a></li>
       <li><a href>Bold Colors</a></li>
