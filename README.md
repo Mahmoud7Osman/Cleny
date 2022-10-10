@@ -10,14 +10,15 @@
 
 # Learn Usage
 <p>So Easy, So Simple, So Powerful</p><br>
+<ul>
 <a>Language Syntax And Core Functionality</a>
-<a>Colors</a>
-<a>Blinking Colors</a>
-<a>Bold Colors</a>
-<a>Underline Colors</a>
-<a>Background Colors</a>
-<a>Special Tags</a>
-
+      <li><a href>Colors</a></li>
+      <li><a href>Blinking Colors</a></li>
+      <li><a href>Bold Colors</a></li>
+      <li><a href>Underline Colors</a></li>
+      <li><a href>Background Colors</a></li>
+      <li><a href>Special Tags</a></li>
+</ul>
 # Simple Examples
 <p>This Code Will Print A White Hello World</p>
 <pre>&ltwhite&gtHello World&lt/white&gt</pre>
