@@ -11,12 +11,12 @@
 # Documentation
 <p>So Easy, So Simple, So Powerful</p><br>
 <ul>
-      <li><a href="color">Colors</a></li>
-      <li><a href="blink">Blinking Colors</a></li>
-      <li><a href="bold">Bold Colors</a></li>
-      <li><a href="under">Underline Colors</a></li>
-      <li><a href="bg">Background Colors</a></li>
-      <li><a href="special">Special Tags</a></li>
+      <li><a href="#color">Colors</a></li>
+      <li><a href="#blink">Blinking Colors</a></li>
+      <li><a href="#bold">Bold Colors</a></li>
+      <li><a href="#under">Underline Colors</a></li>
+      <li><a href="#bg">Background Colors</a></li>
+      <li><a href="#special">Special Tags</a></li>
 </ul>
 
 # Simple Examples
