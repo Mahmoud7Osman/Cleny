@@ -8,16 +8,15 @@
 # Tip
 <p>After Your Installation is Finished, Go on and run example.cleny file and watch what will happen to your command line<br>(This is a Very Small And Simple Script To Show off things to you and What you can do with cleny)</p>
 
-# Learn Usage
+# Documentation
 <p>So Easy, So Simple, So Powerful</p><br>
 <ul>
-      <li><a href>Language Syntax And Core Functionality</a></li>
-      <li><a href>Colors</a></li>
-      <li><a href>Blinking Colors</a></li>
-      <li><a href>Bold Colors</a></li>
-      <li><a href>Underline Colors</a></li>
-      <li><a href>Background Colors</a></li>
-      <li><a href>Special Tags</a></li>
+      <li><a href="color">Colors</a></li>
+      <li><a href="blink">Blinking Colors</a></li>
+      <li><a href="bold">Bold Colors</a></li>
+      <li><a href="under">Underline Colors</a></li>
+      <li><a href="bg">Background Colors</a></li>
+      <li><a href="special">Special Tags</a></li>
 </ul>
 
 # Simple Examples
@@ -25,8 +24,9 @@
 <pre>&ltwhite&gtHello World&lt/white&gt</pre>
 <p>This One Will Print a Red Blinking Hello World</p>
 <pre>&ltblinkred&gtHello World&lt/blinkred&gt</pre>
+
 # All Tags
-<p>Basic Coloring</p>
+<p id="color">Basic Coloring</p>
 <pre>&ltwhite&gtHello World&lt/white&gt</pre>
 <pre>&ltred&gtHello World&lt/red&gt</pre>
 <pre>&ltblue&gtHello World&lt/blue&gt</pre>
@@ -35,7 +35,7 @@
 <pre>&ltcyan&gtHello World&lt/cyan&gt</pre>
 <pre>&ltyellow&gtHello World&lt/yellow&gt</pre>
 <pre>&ltblack&gtHello World&lt/black&gt</pre>
-<p>Blinking</p>
+<p id="blink">Blinking</p>
 <pre>&ltblinkwhite&gtHello World&lt/blinkwhite&gt</pre>
 <pre>&ltblinkred&gtHello World&lt/blinkred&gt</pre>
 <pre>&ltblinkblue&gtHello World&lt/blinkblue&gt</pre>
@@ -44,7 +44,7 @@
 <pre>&ltblinkcyan&gtHello World&lt/blinkcyan&gt</pre>
 <pre>&ltblinkyellow&gtHello World&lt/blinkyellow&gt</pre>
 <pre>&ltblinkblack&gtHello World&lt/blinkblack&gt</pre>
-<p>Bold</p>
+<p id="bold">Bold</p>
 <pre>&ltboldwhite&gtHello World&lt/boldwhite&gt</pre>
 <pre>&ltboldred&gtHello World&lt/boldred&gt</pre>
 <pre>&ltboldblue&gtHello World&lt/boldblue&gt</pre>
@@ -53,7 +53,7 @@
 <pre>&ltboldcyan&gtHello World&lt/boldcyan&gt</pre>
 <pre>&ltboldyellow&gtHello World&lt/boldyellow&gt</pre>
 <pre>&ltboldblack&gtHello World&lt/boldblack&gt</pre>
-<p>Underline</p>
+<p id="under">Underline</p>
 <pre>&ltunderlinewhite&gtHello World&lt/underlinewhite&gt</pre>
 <pre>&ltunderlinered&gtHello World&lt/underlinered&gt</pre>
 <pre>&ltunderlineblue&gtHello World&lt/underlineblue&gt</pre>
@@ -62,7 +62,7 @@
 <pre>&ltunderlinecyan&gtHello World&lt/underlinecyan&gt</pre>
 <pre>&ltunderlineyellow&gtHello World&lt/underlineyellow&gt</pre>
 <pre>&ltunderlineblack&gtHello World&lt/underlineblack&gt</pre>
-<p>Background Color</p>
+<p id="bg">Background Color</p>
 <pre>&ltonwhite&gtHello World&lt/onwhite&gt</pre>
 <pre>&ltonred&gtHello World&lt/onred&gt</pre>
 <pre>&ltonblue&gtHello World&lt/onblue&gt</pre>
@@ -71,3 +71,5 @@
 <pre>&ltoncyan&gtHello World&lt/oncyan&gt</pre>
 <pre>&ltonyellow&gtHello World&lt/onyellow&gt</pre>
 <pre>&ltonblack&gtHello World&lt/onblack&gt</pre>
+<p id="special">Special Tags</p>
+<pre>&ltspaced&gtHello World&lt/spaced&gt // use this for your titles</pre>
